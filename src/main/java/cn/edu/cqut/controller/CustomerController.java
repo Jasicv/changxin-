@@ -36,8 +36,7 @@ public class CustomerController {
 	@Autowired
 	private ICustomerService customerService;
 
-	@ApiOperation(value = "分页返回客户信息",
-			notes = "分页查询客户信息，默认返回第一页，每页10行。还可以根据cusName模糊查询")
+	@ApiOperation(value = "分页返回客户信息",notes = "分页查询客户信息，默认返回第一页，每页10行。还可以根据cusName模糊查询")
 	@RequestMapping(value="/customers",method = RequestMethod.GET)
 //	@RequestMapping("/customers")
 	public CrmResult<Customer> getAllCustomer(
@@ -54,7 +53,6 @@ public class CustomerController {
 		}
 		Page<Customer> pageCustomer = customerService.page(
 				new Page<Customer>(page,limit), qw);
-
 		CrmResult<Customer> ret = new CrmResult<>();
 		ret.setCode(0);
 		ret.setMsg("");
@@ -63,8 +61,7 @@ public class CustomerController {
 		return ret;
 	}
 
-	@ApiOperation(value = "修改客户信息",
-			notes = "修改客户信息，修改后更新客户列表内容")
+	@ApiOperation(value = "修改客户信息",notes = "修改客户信息，修改后更新客户列表内容")
 	@RequestMapping(value="/updateCustomer",method = RequestMethod.GET)
 	public CrmResult<Customer> updateCustomer(Customer customer){
 		customerService.updateById(customer);  //根据主键更新表
@@ -75,8 +72,7 @@ public class CustomerController {
 		return ret;
 	}
 
-	@ApiOperation(value = "新增客户信息",
-			notes = "新增客户信息，新增后更新客户列表内容")
+	@ApiOperation(value = "新增客户信息",notes = "新增客户信息，新增后更新客户列表内容")
 	@RequestMapping(value="/addCustomer",method = RequestMethod.GET)
 	public CrmResult<Customer> addCustomer(Customer customer){
 		customerService.save(customer);
@@ -87,8 +83,7 @@ public class CustomerController {
 		return ret;
 	}
 
-	@ApiOperation(value = "删除客户信息",
-			notes = "删除客户信息，删除后更新客户列表内容")
+	@ApiOperation(value = "删除客户信息",notes = "删除客户信息，删除后更新客户列表内容")
 	@RequestMapping(value="/delCustomer",method = RequestMethod.GET)
 	public CrmResult<Customer> delCustomer(String[] ids){
 		customerService.removeByIds(Arrays.asList(ids));
