@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    background-color: white;
+}
+body{
+    position: relative;
+    background-size:1920px 1080px;
+    background-image: url("../img/assets/login-bg2.jpg");
+}
+.div-wrap{
+    /*top: 25%;*/
+    width: 450px;
+    height: 620px;
+    margin: 0 auto;
+}
+#div-content{
+    width: 450px;
+    height: 620px;
+    /*margin-top: 60px;*/
+    background-color: #ffffff;
+    border: 1px solid lightsteelblue;
+    margin: 0 auto;
+    position: relative;
+    top: 21%;
+    border-radius: 10px;
+}
+#div-content-top{
+    width: 450px;
+    height: 60px;
+    margin-top: 40px;
+
+}
+#div-content a{
+    cursor: pointer;
+    margin-left: 30px;
+    color: cornflowerblue;
+}
+.active{
+    font-size: 30px;
+    font-weight: bold;
+}
+/*帐号登陆*/
+.show{
+    height: 451px
+}
+#div-AccountLogin{
+    height: 300px;
+    width: 450px;
+}
+#div-AccountLogin>div{
+    height: 100px;
+    position: relative;
+}
+.account-number,.account-password{
+    width: 380px;
+    height: 55px;
+    background-color: floralwhite;
+    margin-top: 10px;
+    margin-left: 30px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+
+}
+#div-AccountLoginWarn{
+    width: 200px;
+    height: 40px;
+    background-color: lightsteelblue;
+    color: gray;
+    font-size: 14px;
+    text-indent: 2em;
+    display: none;
+    position: absolute;
+}
+#div-AutoLogin{
+    /*position: relative;*/
+    margin-left: 30px;
+    color: gray;
+    margin-top: 20px;
+}
+#div-AutoLogin>a{
+    float: right;
+    margin-right:30px;
+}
+/*密码输入错误提示*/
+#password-tips{
+    color: red;
+    font-size: 14px;
+    float: right;
+    margin-right: 50px;
+    margin-top: 10px;
+    /*display: none;*/
+}
+/*单选框*/
+.account-identity-title{
+    /*background: #999999;*/
+    height: 100px;
+    float: left;
+    line-height: 80px;
+    color: cornflowerblue;
+    width: 180px;
+    font-size: 23px;
+    /*margin-top: 10px;*/
+    margin-left: 30px;
+}
+.account-identity{
+    float: left;
+    line-height: 80px;
+    color: cornflowerblue;
+    font-size: 23px;
+}
+.account-identity input{
+    zoom: 140%;
+}
+#Btn-Login{
+    width: 390px;
+    height: 50px;
+    background-color: deepskyblue;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 60px;
+    border-radius: 6px;
+    border: none;
+    position: relative;
+}
+#p-Register{
+    float: right;
+    margin-right: 30px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+/*短信登陆*/
+#div-SMSLogin{
+    height: 200px;
+    width: 450px;
+}
+.div-Phone{
+    height: 109px;
+}
+.SMS-Phone{
+    width: 380px;
+    height: 55px;
+    margin-top: 20px;
+    margin-left: 30px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+/*手机输入错误提示*/
+.tips{
+    color: red;
+    font-size: 14px;
+    margin-left: 30px;
+    width: 380px;
+    text-align: right;
+    margin-top: 10px;
+    /*display: none;*/
+}
+.SMS-Verify{
+    width: 230px;
+    height: 55px;
+    margin-top: 10px;
+    margin-left: 30px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+.input-Btn{
+    width: 120px;
+    height: 57px;
+    margin-top: 10px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    color: gray;
+    margin-left: 22px;
+}
+.input-Btn:hover{
+    cursor: pointer;
+    color: deepskyblue;
+    background-color: #cccccc;
+}
+#div-SMSLoginWarn{
+    width: 200px;
+    height: 40px;
+    background-color: lightsteelblue;
+    color: gray;
+    font-size: 14px;
+    text-indent: 2em;
+    display: none;
+    position: absolute;
+}
+#div-SMSAutoLogin{
+    margin-left: 30px;
+    color: gray;
+    margin-top: 20px;
+}
+#div-SMSAutoLogin>a{
+    float: right;
+    margin-right:30px;
+}
+#div-SMSAutoLoginAutoLogin>a{
+    float: right;
+    margin-right:30px;
+}
+#Btn-SMSLogin{
+    width: 390px;
+    height: 50px;
+    background-color: deepskyblue;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 60px;
+    border-radius: 6px;
+    border: none;
+    position: relative;
+}
+#p-SMSRegister{
+    float: right;
+    margin-right: 30px;
+    font-size: 14px;
+    margin-top: 10px;
+}

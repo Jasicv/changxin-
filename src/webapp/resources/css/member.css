@@ -1,0 +1,594 @@
+body{
+    margin: 0 auto;
+    padding: 0 ;
+}
+i {
+    font-style: normal;
+}
+/*
+*头部
+*/
+.top{
+    width: 100%;
+    height: 72px;
+    background-color: white;
+    border-bottom: 1px solid #F6F6F6;
+    position: fixed;
+    box-shadow: 1px 1px 1px #F6F6F6;
+    z-index: 9;
+    padding-left: 60px;
+    text-align: center;
+}
+/*顶部右边返回按钮*/
+.topLeft{
+    line-height: 72px;
+    height: 72px;
+    float: left;
+}
+.logo{
+    display: inline-block;
+    position: absolute;
+    margin-top: 10px;
+}
+.span{
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    padding: 4px;
+    font-size: 16px;
+    background-color: #2c58ab;
+    color: white;
+    border-radius: 16px;
+    margin-left: 40px;
+}
+/* 导航栏 */
+.topNavigation{
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul,ol{
+    list-style: none;
+}
+.top ul li{
+    float: left;
+    line-height: 52px;
+    font-size: 18px;
+    width: 100px;
+}
+.topNavigationMember{
+    border-bottom: 4px solid #2C58AB;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+.btm{
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #2c58ab;
+    left: 500px;
+    bottom: 0px;
+}
+.topRight{
+    display: inline-block;
+    float: right;
+    padding-right: 100px;
+}
+/* 头部右边 */
+.touxiangBox{
+    width: 100px;
+    display: inline-block;
+}
+#touxiang{
+    width: 45px;
+    height: 40px;
+    position: absolute;
+    margin-top: -34px;
+}
+/* 点击弹出列表框 */
+#people{
+    width: 160px;
+    height: 270px;
+    background-color: white;
+    position: absolute;
+    margin-top: 26px;
+    margin-left: -50px;
+    display: none;
+    box-shadow: 2px 2px 10px #A1A1A1;
+}
+.item4 a{
+    font-size: 14px;
+    margin-left: -40px;
+    width: 160px;
+    height: 40px;
+    display: inline-block;
+    color: black;
+}
+.item4{
+    list-style: none;
+}
+.item4 :hover{
+    background-color: gainsboro;
+    color: blue;
+}
+
+.vip{
+    position: absolute;
+    margin-top: 7px;
+}
+.mechanismNo{
+    position: absolute;
+    margin-top: 13px;
+    margin-left: 38px;
+    width: 20px;
+    height: 20px;
+}
+.recode_2{
+    position: absolute;
+    margin-top: 13px;
+    margin-left: 10px;
+    width: 15px;
+    height: 20px;
+}
+/*  */
+#naozhong{
+    width: 25px;
+    height: 25px;
+}
+.newsOpen{
+    display: inline-block;
+    width: 50px;
+    height: 72px;
+    line-height: 92px;
+    margin-right: -30px;
+}
+
+/* 消息通知弹出框 */
+#news{
+    width: 350px;
+    height: 320px;
+    position: absolute;
+    background-color: white;
+    margin-top: -20px;
+    border-radius: 5px;
+    margin-left: -250px;
+    box-shadow: 2px 2px 10px #A1A1A1;
+    display: none;
+
+}
+.newsTitle{
+    font-size: 16px;
+}
+.newsDown{
+    background-color: #f2f2f2;
+    margin-top: 178px;
+    height: 50px;
+    line-height: 50px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.newsLeft{
+    color: #999;
+    font-size: 16px;
+    padding-right: 40px;
+}
+.newsRight{
+    color: #999;
+    font-size: 16px;
+    padding-left: 40px;
+}
+.tool1{
+    display: inline-block;
+    width: 150px;
+
+}
+.tool_icon{
+    float: right;
+    margin-right: 20px;
+}
+/* 中部 */
+.contentTop{
+    width: 1224px;
+    height: 156px;
+    margin: 0 auto;
+    border-bottom: 1px solid #E9E9E9;
+
+}
+/* 按钮 */
+.contentTopLeft{
+    width: 520px;
+    height: 32px;
+    float: left;
+    margin-top: 100px;
+}
+
+.join{
+    width: 104px;
+    height: 32px;
+    float: left;
+    background-color: #32baf0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+    margin-top: 5px;
+}
+.span3{
+    margin-top: 6px;
+    margin-left: 20px;
+    position: absolute;
+}
+.xiazai{
+    margin-left: 120px;
+    position: absolute;
+    margin-top: 10px;
+}
+.download{
+    margin-left: 40px;
+    font-size: 14px;
+    margin-top: 10px;
+    position: absolute;
+    color: #5F6368;
+
+}
+.download:hover{
+    text-decoration: underline black;
+}
+.biao{
+    margin-left: 240px;
+    position: absolute;
+    margin-top: 10px;
+}
+.table{
+    margin-left: 160px;
+    font-size: 14px;
+    margin-top: 10px;
+    position: absolute;
+    color: #5F6368;
+}
+/* 右边查询框 */
+.textBox{
+    width: 176px;
+    height: 30px;
+    float: right;
+    margin-top: 110px;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+}
+.input{
+    width: 136px;
+    height: 28px;
+    background-color: #e6e6e6;
+    border: 0px;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 14px;
+}
+
+
+/* 表格部分 */
+.contentMain{
+    width: 1224px;
+    height: 620px;
+    background-color: white;
+    margin: 0 auto;
+    font-size: 14px;
+}
+.contentMainBox{
+    width: 100%;
+    height: 602px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: 1px solid gainsboro;
+}
+/* 左边部分 */
+.contentMainLeft{
+    width: 284px;
+    height: 602px;
+    float: left;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.navigation {
+    margin-left: -41px;
+    text-align: center;
+    background-color: #f4f4f4;
+    font-size: 16px;
+    margin-top: -1px;
+
+}
+.navigation li {
+    float: left;
+    height: 40px;
+    width: 100%;
+    list-style: none;
+    padding-top: 20px;
+    cursor: pointer;
+}
+.navigation li:focus,.selected {
+    background-color:#32BAF0;
+}
+.choose{
+    background-color:#32BAF0;
+    color: white;
+}
+
+/* 右边 */
+.contentMainRight{
+    width: 939px;
+    float: right;
+    height: 602px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left: 1px solid gainsboro;
+}
+.rightTopStudent{
+    background-color: #F1F3F4;
+    width: 100%;
+    height: 60px;
+    border-top-right-radius: 10px;
+}
+.rightTop{
+    background-color: #F1F3F4;
+    width: 100%;
+    height: 40px;
+    border-top-right-radius: 10px;
+    padding-top: 20px;
+}
+.allCheck{
+    display: inline-block;
+    position: absolute;
+    margin-left: 1px;
+}
+#pp{
+    margin-left: 80px;
+}
+.span1{
+    font-size: 16px;
+    margin-left: 30px;
+    margin-top: 15px;
+    position: absolute;
+}
+.joinTeacher{
+    width: 172px;
+    height: 32px;
+    float: right;
+    background-color: #32baf0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+.span2{
+    margin-top: 4px;
+    margin-left: 40px;
+    position: absolute;
+    font-size: 16px;
+}
+.tianjia{
+    margin-top: 5px;
+    margin-left: 15px;
+    position: absolute;
+}
+/*  */
+.teacherBox{
+    width: 100%;
+}
+.teacher{
+    width: 100%;
+    height: 60px;
+}
+.teacher:hover{
+    background-color: #F1F3F4;
+}
+.touxiang1{
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 45px;
+}
+.span4{
+    margin-left: 20px;
+    margin-top:15px ;
+    position: absolute;
+}
+.span5{
+    margin-left: 350px;
+    margin-top:15px ;
+    position: absolute;
+}
+.opt1{
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.sixin{
+    float: right;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+/*  */
+/* #list{
+    background-color: white;
+    border: 1px solid gainsboro;
+    position: absolute;
+    margin-left: 800px;
+    margin-top: -20px;
+    z-index: 888;
+    line-height: 40px;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 0;
+    width: 120px;
+    height:80px;
+
+}
+.item{
+    list-style: none;
+}
+.item li a{
+
+    color: #484848;
+    font-size: 20px;
+
+}
+#list a:hover{
+    background-color: gainsboro;
+
+}  */
+.span7{
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.checkbox2{
+    float: right;
+    margin-right: 5px;
+    margin-top: 18px;
+}
+/*蓝色开关按钮  */
+.switch-btn{
+    width: 45px;
+    height: 22px;
+    position: relative;
+    top: 1px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 17px;
+}
+.hidden-checkbox,
+.switch-area,
+.switch-toggle{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.hidden-checkbox{
+    width: 45px;
+    height: 25px;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+}
+.switch-area{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-color: #32BAF0;
+}
+.switch-toggle{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #32BAF0;
+    border-radius: 50%;
+    background-color: #fff;
+}
+/* //核心代码 */
+.hidden-checkbox:checked ~ .switch-area{
+    background-color: #B3B3B3;
+}
+.hidden-checkbox:checked ~ .switch-toggle{
+    border: 1px solid #B3B3B3;
+    left: 20px;
+}
+.switch-area,
+.switch-toggle{
+    -webkit-transition: All 0.3s ease;
+    -moz-transition: All 0.3s ease;
+    -o-transition: All 0.3s ease;
+    transition: All 0.3s ease;
+}
+
+
+.checkbox1{
+    width: 17px;
+    height:17px;
+    margin-top:20px;
+    margin-left: 40px;
+}
+.delete{
+    width: 100px;
+    height: 32px;
+    background-color: #D2D2D2;
+    /*background-color: #32baf0;*/
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+    margin-left: 180px;
+    margin-top: -25px;
+    text-align: center;
+}
+.span6{
+    margin-top: 7px;
+    position: absolute;
+    margin-left: -27px;
+}
+.send{
+    width: 100px;
+    height: 32px;
+    background-color: #D2D2D2;
+    /*background-color: white;
+    border: 1px solid #32baf0;*/
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+    /*color: #32baf0;  */
+    margin-left: 300px;
+    margin-top: -33px;
+    text-align: center;
+}
+
+
+/* 表格 */
+table{
+    width: 100%;
+    height:60px;
+    border: 0px;
+    font-size: 14px;
+}
+.contentTable{
+    width: 100%;
+    height: 480px;
+    overflow: auto;
+}
+td{
+    border: 0px ;
+}
+.checkbox{
+    /*width: 17px;
+    height:17px;
+    margin-left: 40px;
+    background-color: white;*/
+
+}
+.checkBox input[type='checkbox']{
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    -webkit-appearance:none;
+    border: 1px solid #c9c9c9;
+    border-radius: 2px;
+    outline: none;
+    margin-left: 40px;
+}
+.checkBox input[type=checkbox]:checked{
+    background: url("../img/yes.png")no-repeat center;
+    background-color: #32BAF0;
+}
+tr{
+    height: 60px;
+}
+tr:hover{
+    background-color: #F1F3F4;
+}
+.touxiang2{
+    width: 40px;
+    height:40px;
+    margin-left: -36px;
+}
+
+

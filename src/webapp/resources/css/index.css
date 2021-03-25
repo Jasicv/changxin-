@@ -1,0 +1,270 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #ECECEC;
+}
+.header {
+    height: 70px;
+    background-color: rgb(39, 46, 56);
+    position: relative;
+}
+.header img{
+    width: 127px;
+    height: 32px;
+    padding-top: 17px;
+    padding-left: 50px;
+    float: left;
+}
+/*登录注册*/
+.login-regist{
+    height: 38px;
+    width: 234px;
+    padding-top: 17px;
+    float: right;
+}
+.login{
+    font-family: 微软雅黑;
+    background-color: rgb(39, 46, 56);
+    border-radius: 3px;
+    margin-right: 20px;
+    border: 1px solid;
+    cursor: pointer;
+    outline:none;
+    color: white;
+    height: 38px;
+    width: 78px;
+    font-size: 18px;
+}
+.login:hover{
+    font-family: 微软雅黑;
+    background-color: rgb(39, 46, 56);
+    border-radius: 3px;
+    margin-right: 20px;
+    border: 1px solid #409EFF;
+    cursor: pointer;
+    outline:none;
+    color: #409EFF;
+    height: 38px;
+    width: 78px;
+}
+.regist{
+    font-family: 微软雅黑;
+    background-color: rgb(39, 46, 56);
+    background: #409EFF;
+    border-radius: 3px;
+    cursor: pointer;
+    outline:none;
+    border: 0;
+    color: white;
+    height: 38px;
+    width: 78px;
+    font-size: 18px;
+}
+.regist:hover{
+    font-family: 微软雅黑;
+    background-color: rgb(39, 46, 56);
+    background: deepskyblue;
+    border-radius: 3px;
+    cursor: pointer;
+    outline:none;
+    border: 0;
+    color: white;
+    height: 38px;
+    width: 78px;
+}
+/*中间轮播*/
+.main{
+    position: relative;
+    height: 1580px;
+    width: 100%;
+}
+.main-div{
+    width: 100%;
+    height: 580px;
+    overflow: hidden;
+    position: relative;
+}
+.main-div-img{
+    position: absolute;
+    overflow: hidden;
+    height: 580px;
+    width: 3840px;
+    left: 0;
+}
+.main-div-img img{
+    width: 1920px;
+    height: 580px;
+    float: left;
+}
+/*滚动播放按钮*/
+.main-ul{
+    height: 30px;
+    position: absolute;
+    bottom: 30px;
+    left: 48.25%;
+}
+.main-ul li{
+    height: 26px;
+    width: 30px;
+    display: inline-block;
+    padding: 12px 4px;
+    cursor: pointer;
+}
+.main-ul li button{
+    display: block;
+    opacity: .48;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    border: none;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+/*静态div1*/
+.section2-1 {
+    height: 600px;
+    position: relative;
+}
+.cWidth {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.summaryBox {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 980px;
+    height: 570px;
+    margin-top: 20px;
+}
+.section2-1 ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1008px;
+    height: 570px;
+}
+.section2-1 ul li {
+    list-style: none;
+    margin-right: 30px;
+    text-align: center;
+    width: 222px;
+    height: 260px;
+    background: white;
+}
+.section2-1 ul li img {
+    margin-top: 25px;
+    width: 72px;
+    height: 72px;
+}
+.section2-1 ul li h2 {
+    color: #1F2023;
+    font-size: 18px;
+    margin-top: 16px;
+}
+.section2-1 ul li p {
+    background: white;
+    color: #64707d;
+    margin-top: 16px;
+    font-size: 13px;
+    width: 190px;
+    margin-left: 17px;
+    text-align: left;
+    word-break: break-all;
+}
+
+/*静态div2*/
+.sections2-1 {
+    width: 100%;
+    background: #fff;
+}
+.cont {
+    width: 980px;
+    margin: 0 auto;
+    display: flex;
+}
+.let {
+    flex: 1;
+    padding-right: 50px;
+}
+.let img {
+    width: 100%;
+}
+.rig {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.rig img {
+    width: 40px;
+    margin-bottom: 16px;
+}
+.rig h5 {
+    font-size: 32px;
+    color: #4285F4;
+    letter-spacing: .5px;
+    line-height: 48px;
+    margin-bottom: 24px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+.rig ul li {
+    font-size: 18px;
+    color: #333;
+    letter-spacing: 0;
+    list-style: none;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+}
+.rig ul li span {
+    width: 6px;
+    height: 6px;
+    background: #4285F4;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+/*最底部*/
+.footer{
+    height: 150px;
+    background: #ececec;
+}
+.cWidth{
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer .nav-new {
+    padding-top: 36px;
+    text-align: center;
+}
+.footer .nav-new a {
+    color: #2d2d2d;
+    margin-right: 60px;
+}
+.footer p {
+    margin-top: 15px;
+    color: #5b5b5b;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+

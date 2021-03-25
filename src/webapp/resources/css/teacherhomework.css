@@ -1,0 +1,940 @@
+body{
+    margin: 0 auto;
+    padding: 0 ;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+i{
+    font-style: normal;
+}
+
+/*
+*头部
+*/
+.top{
+    width: 100%;
+    height: 72px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+}
+/* 头部左边 */
+.topLeft{
+    width: 300px;
+    height: 72px;
+    position: absolute;
+}
+.suofang{
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 32px;
+}
+.span{
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+.span1{
+    position: absolute;
+    margin-left: 140px;
+    margin-top: 30px;
+}
+/* 头部右边 */
+.touxiangBox{
+    float: right;
+    
+    width: 100px;
+    height: 72px;
+}
+#touxiang{
+    width: 45px;
+    height: 40px;
+    float: left;
+    margin-top: 20px; 
+}
+/* 点击弹出列表框 */
+.div-nav-default{
+    width: 100%;
+    height: 72px;
+    padding: 0 2%;
+    font-size: 16px;
+    top: 0;
+    position: fixed;
+    box-shadow: 0 0 1px #cccccc;
+    box-sizing: border-box;
+    background-color: white;
+    z-index: 1000;
+}
+/*左菜单*/
+.ul-nav-menu-left{
+    margin-left: 0;
+    margin-top: 5px;
+    /*width: 400px;*/
+    float: left;
+}
+.ul-nav-menu-left>li{
+    float: left;
+}
+.courseInfo{
+    top: -5px;
+    width: 200px;
+    position: relative;
+}
+.courseInfo p{
+    float: left;
+    color: #000;
+}
+.li-nav-item{
+    margin: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+}
+.ul-nav-menu-left .li-nav-item a{
+    padding-bottom: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.li-nav-item a.active{
+    border-bottom: 4px solid #2C58AB;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+/*右菜单*/
+.ul-nav-menu-right{
+    margin-right: 0;
+    margin-top: 8px;
+    float: right;
+}
+.ul-nav-menu-right>li{
+    float: left;
+}
+.ul-tool{
+    padding: 8px 0;
+    box-shadow: 0 0 20px rgba(0,0,0,.35);
+    position: absolute;
+    width: 120px;
+    background: #fff;
+    list-style: none;
+    z-index: 10;
+    top: 50px;
+    text-align: center;
+}
+.tool>ul>li:hover{
+    background-color: #cccccc;
+}
+.user>a img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-top: -3px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.div-notice{
+    z-index: 10;
+    position: fixed;
+    right: 31px;
+    top: 71px;
+    background: #FFF;
+    width: 343px;
+    border: 1px solid #DCDCDC;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    border-radius: 5px;
+}
+.div-notice .zw{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #2D2D2C;
+    font-size: 16px;
+    min-height: 260px;
+}
+.div-notice .div-operation{
+    height: 44px;
+    background: #f2f2f2;
+    border-radius: 5px;
+}
+.div-operation>a{
+    float: left;
+    display: block;
+    height: 15px;
+    font-size: 16px;
+    line-height: 50px;
+    color: #999;
+    text-indent: 42px;
+}
+.div-operation .div-operation-check{
+    float: right;
+    margin-right: 42px;
+}
+.ul-user-info{
+    position: absolute;
+    width: 160px;
+    padding: 8px 0;
+    left: -110px;
+    top: 45px;
+    text-align: center;
+    z-index: 1000;
+    background: #FFF;
+    box-shadow: 0 0 20px rgba(0,0,0,.35);
+}
+.ul-user-info>ul{
+    list-style: none;
+}
+.ul-user-info>ul>li>a:hover{
+    color: deepskyblue;
+}
+.left-return{
+    position: absolute;
+    top: 24px;
+    left: 2%;
+    height: 24px;
+    display: block;
+}
+.returnLogo{
+    width: 27px;
+    display: inline-block;
+    height: 25px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.courseName{
+    padding: 0 10px;
+    border-radius: 15px;
+    font-size: 16px;
+    line-height: 32px;
+    background: #2c58ab;
+    cursor: pointer;
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 80px;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    margin-left: 20px;
+}
+.nav-middle{
+    width: 60%;
+    height: 72px;
+    margin-left: 250px;
+    text-align: center;
+    float: left;
+}
+.nav-middle>a{
+    height: 72px;
+    min-width: 80px;
+    line-height: 72px;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #2D2D2C;
+    display: inline-block;
+    text-align: center;
+}
+.nav-middle a.choose{
+    border-bottom: 4px solid #2C58AB;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+/*#people{*/
+/*    width: 160px;*/
+/*    height: 230px;*/
+/*    background-color: white;*/
+/*    position: absolute;*/
+/*    margin-top: 70px;*/
+/*    margin-left: -100px;*/
+/*    display: none;*/
+/*    box-shadow: 2px 2px 10px #A1A1A1;*/
+/*    padding-right: 0px;*/
+/*}*/
+
+.item4 a{
+    font-size: 14px;
+    margin-left: -40px;
+    width: 160px;
+    height: 40px;
+    display: inline-block;
+    color: black;
+    line-height: 40px;
+}
+.item4{
+    list-style: none;
+}
+.item4 a:hover{
+    background-color: gainsboro;
+    color: blue;
+    
+}
+
+.vip{
+    position: absolute;
+    margin-top: 3px;
+}
+.set{
+    position: absolute;
+    margin-top: 0px;
+}
+.return{
+    position: absolute;
+    margin-top: 5px;
+}
+.mechanismNo{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 8px;
+    width: 20px;
+    height: 20px;
+}
+.recode_2{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 15px;
+    height: 20px;
+}
+/*  */
+#naozhong{
+    width: 25px;
+    height: 25px;
+    float: right;
+    margin-top: 30px; 
+    margin-right: 20px;
+}
+.newsOpen{
+    float: right;
+    
+    width: 50px;
+    height: 72px;
+}
+
+/* 消息通知弹出框 */
+#news{
+    width: 350px;
+    height: 320px;
+    position: absolute;
+    background-color: white;
+    margin-top: 70px;
+    border-radius: 5px;
+    margin-left: -250px;
+    box-shadow: 2px 2px 10px #A1A1A1;
+    display: none;
+    
+}
+.newsTitle{
+    font-size: 18px;
+    margin-left: 130px;
+    margin-top: 20px;
+    position: absolute;
+
+}
+.newsDown{
+    position: absolute;
+    bottom: 0;
+    width: 350px;
+    height:50px;
+    background-color: #f2f2f2;
+}
+.newsLeft{
+    color: #999;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-left: 50px;
+    position: absolute;
+}
+
+.newsRight{
+    color: #999;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-left: 220px;
+    position: absolute;
+}
+
+
+.tool1{
+    float: right;
+    width: 150px;
+    height: 72px;
+    
+}
+.tool_icon{
+    
+    float: right;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+
+/* 中部 */
+.content{
+    width: 1224px;
+    margin: 0 auto;
+}
+.course{
+    width: 1224px;
+    height: 481px;
+    margin: 0 auto;
+}
+/* 头部图片 */
+.coursrHeader{
+    width: 1224px;
+    height: 273px;
+    margin-top: 105px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: #f1f3f4;
+}
+.image1{
+    width: 1224px;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.title{
+    /*width: 400px;*/
+    height: 51px;
+    position: absolute;
+    margin-top: -150px;
+    margin-left: 30px;
+    color: white;
+}
+.span2{
+    font-size: 35px;
+}
+.edit-course{
+    width: 24px;
+    height: 24px; 
+    float: right;
+    margin-top: 12px;
+}
+/*图片上的文字  */
+.title1{
+    width: 600px;
+    height: 25px; 
+    
+    position: absolute;
+    margin-top: -75px;
+    margin-left: 10px;
+}
+.extraCode{
+    margin-left: 20px;
+    float: left;
+    
+}
+.extraCode a{
+    font-size: 14px;
+    color: white;
+    background: rgba(255,255,255,.2);
+}
+.extraCode div{
+    font-size: 14px; 
+    color: white;
+    background: rgba(255,255,255,.2);
+}
+.extraCode-courseId{
+    font-size: 14px;
+    color: white;
+}
+.erweima{
+    width: 14px;
+    height: 14px;
+    margin-top: 2px;
+    
+    
+}
+.clothes{
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    margin-top: -180px;
+    margin-left: 1100px;
+    
+}
+
+.span3{
+    font-size: 16px;
+    color: white;
+}
+.number{
+    width: 250px;
+    height: 46px;
+    position: absolute;
+    margin-top: -130px;
+    margin-left: 900px;
+}
+.span4{
+    font-size: 40px;
+    color: white;
+}
+.span5{
+    font-size: 40px;
+    color: white;
+    margin-left: 81px;
+}
+.numbertitle{
+    width: 288px;
+    height: 16px;
+    position: absolute;
+    margin-top: -84px;
+    margin-left: 881px;
+}
+.span6{
+    font-size: 14px;
+    color: white;
+}
+.span7{
+    font-size: 14px;
+    color: white;
+    margin-left: 50px;
+}
+/* 导航栏 */
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+.coursrHeader ul{
+    float: left;
+}
+.coursrHeader ul li{
+    margin: 0px 20px;
+    float: left;
+    padding: 0 20px;
+    height: 48px;
+    line-height: 40px;
+    font-size: 18px;
+}
+.activeOther a{
+    color: #A1A1A1;
+}
+.active{
+    color: #000;
+    border-bottom: 4px solid #328eeb;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+.activeOther a:hover{
+    color: #32BAF0;
+}
+.btm{
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #2c58ab;
+    left: 200px;
+    bottom: 0px;
+}
+
+/* 发布作业按钮 */
+.coursrMain{
+    width: 1224px;
+    height: 103px;
+    position: absolute;
+    margin-top: 378px;
+}
+.button{
+    width: 136px;
+    height: 40px;
+    border:1px solid #32BAF0;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 35px;
+    color:#32BAF0 ;
+}
+.xiazai1{
+    margin-top: 40px;
+    float: right;
+}
+
+/* 发布作业页面 */
+.releaseWork{
+    width: 1224px;
+    height: 784px;
+    margin: 0 auto;
+}
+/* 发布作业 */
+#homeWork{
+    width: 100%;
+    height: 530px;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: none;
+    
+}
+.textBox2{
+    width:90% ;
+    height: 40px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    margin-left: 50px;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.textBox3{
+    width:90% ;
+    height: 120px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    margin-left: 50px;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.data{
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.textBox4{
+    width:302px ;
+    height: 40px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    padding-left: 20px;
+}
+.textBox7{
+    width:60px ;
+    height: 40px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    padding-left: 20px;
+}
+.textBox5{
+    width:37px ;
+    height: 40px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+#chachong{
+    width:250px ;
+    height: 100px;
+    margin-top: -30px;
+    margin-left: 200px;
+}
+.data1{
+    margin-left: 50px;
+    margin-top: 20px;
+    width: 90%;
+}
+.button4{
+    background-color:#32BAF0 ;
+    border-radius: 5px;
+    width:102px ;
+    height: 38px;
+    border: 0;
+}
+.button5{
+    background-color:#32BAF0 ;
+    border-radius: 5px;
+    width:142px ;
+    height: 38px;
+    border: 0;
+    float: right;
+}
+.button6{
+    background-color: white;
+    border: 1px solid #32BAF0 ;
+    border-radius: 5px;
+    width:82px ;
+    height: 38px;
+    float: right;
+    margin-right: 30px;
+}
+
+/*蓝色开关按钮  */
+.switch-btn{
+    z-index: 14;
+	width: 45px;
+	height: 25px;
+	position: relative;
+    margin-top: -25px;
+    margin-left: 90px;
+    
+    
+}
+.hidden-checkbox,
+.switch-area,
+.switch-toggle{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.hidden-checkbox{
+	width: 45px;
+    height: 20px;
+	opacity: 0;
+	z-index: 10;
+	cursor: pointer;
+}
+.switch-area{
+	width: 100%;
+	height: 100%;
+	border-radius: 25px;
+	background-color: #32BAF0 ;
+}
+.switch-toggle{
+	width: 25px;
+	height: 23px;
+	border: 1px solid #32BAF0 ;
+	border-radius: 50%;
+	background-color: #fff;
+}
+/* //核心代码 */
+.hidden-checkbox:checked ~ .switch-area{
+	background-color: #B3B3B3;
+}
+.hidden-checkbox:checked ~ .switch-toggle{
+    border: 1px solid #B3B3B3;
+   left: 20px;
+}
+.switch-area,
+.switch-toggle{
+	-webkit-transition: All 0.3s ease; 
+	   -moz-transition: All 0.3s ease; 
+	     -o-transition: All 0.3s ease;
+	        transition: All 0.3s ease; 
+} 
+
+/* 作业框 */
+.seeHomeworkBox{
+    width: 100%;
+}
+.seeHomework{
+    width: 100%;
+    height: 195px;
+    margin-bottom: 20px;
+    border: 1px solid gainsboro;
+    
+    
+    border-radius: 10px;
+    
+}
+.personWork{
+    margin-top: 30px;
+    margin-left: 40px;
+    background-color:#f1f3f4 ;
+    position: absolute;
+    font-size: 14px;
+    
+}
+.time{
+    margin-top: 30px;
+    margin-left: 120px;
+    position: absolute;
+    font-size: 14px;
+}
+.twoWork{
+    margin-top: 70px;
+    margin-left: 40px;
+    position: absolute;
+    font-size: 20px;
+}
+.box a:hover{
+    color: #32BAF0 ;
+    text-decoration: underline #32BAF0;
+}
+.details{
+    margin-top: 120px;
+    margin-left: 40px;
+    position: absolute;
+    font-size: 14px;
+    color: gray;
+}
+.finnalTime{
+    margin-top: 155px;
+    margin-left: 40px;
+    position: absolute;
+    font-size: 14px;
+    color: gray;
+}
+.number1{
+    width: 250px;
+    height: 46px;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 900px;
+}
+.span8{
+    font-size: 40px;
+    color: grey;
+}
+.span9{
+    font-size: 40px;
+    color: grey;
+    margin-left: 81px;
+}
+.span91{
+    font-size: 40px;
+    color: grey;
+    margin-left: 81px;
+}
+.numbertitle1{
+    width: 250px;
+    height: 16px;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 900px;
+}
+.span10{
+    font-size: 14px;
+    color: gray;
+}
+.span11{
+    font-size: 14px;
+    color: gray;
+    margin-left: 78px;
+}
+.status{
+    float: right;
+    position: relative;
+    height: 50px;
+    width: 350px;
+    margin-top: 43px;
+}
+.status a{
+    display: inline-block;
+    width: 75px;
+    text-align: center;
+    font-size: 40px;
+    color: grey;
+}
+.status p{
+    width: 75px;
+    text-align: center;
+    font-size: 14px;
+    color: gray;
+}
+.status div{
+    width: 75px;
+    margin-right: 30px;
+}
+.revised{
+    float: left;
+}
+.unrevised{
+    float: left;
+    color: red;
+}
+.unturned{
+    float: left;
+}
+.span8:hover{
+    color: green;
+}
+.span9:hover{
+    color: red;
+}
+.contentBottom{
+    width: 1224px;
+    height: 153px;
+    background-color: #f1f3f4;
+    position: absolute;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 14px;
+    color: #A1A1A1;
+}
+/*<!--    左划出菜单-->*/
+.div-left-menu{
+    display: none;
+    width: 350px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 6px 0 12px rgba(0,0,0,.12);
+    background-color: white;
+}
+.div-left-menu-top{
+    padding: 9px 0;
+}
+.div-left-menu-top>a{
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    padding: 5px 35px;
+    width: 280px;
+    display: inline-block;
+    background-position: 33px;
+}
+.div-left-menu-top>a:hover{
+    background-color: #F7F7F7;
+    color: deepskyblue;
+}
+.div-left-menu-course{
+    position: relative;
+    overflow: hidden;
+    width: 350px;
+    height: 100%;
+}
+.courseBox{
+    position: absolute;
+    left: 0;
+    width: 350px;
+}
+.courseBox>p{
+    color: #5F6368;
+    font-size: 14px;
+    height: 46px;
+    padding-left: 35px;
+    cursor: pointer;
+}
+.courseList{
+    margin-top: -10px;
+    width: 350px;
+    padding: 10px 35px;
+    /*position: relative;*/
+}
+.courseList img{
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    display: inline-block;
+    position: absolute;
+}
+.courseList a{
+    line-height: 40px;
+    height: 40px;
+    width: 295px;
+    font-size: 14px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 56px;
+}
+.courseList:hover{
+    background-color: #E2E6ED;
+}
+.courseList:hover .courseList>a{
+    color: #32BAF0;
+}
+
+.bar1{
+    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: 8px;
+}
+.bar2{
+    background: #000;
+    width: 8px;
+    position: absolute;
+    border-radius: 5px;
+    opacity: .4;
+    left: 0;
+}

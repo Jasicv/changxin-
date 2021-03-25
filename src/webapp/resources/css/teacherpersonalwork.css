@@ -1,0 +1,931 @@
+*{
+     margin: 0;
+     padding: 0;
+     outline: 0;
+ }
+i{
+    font-style: normal;
+}
+body{
+    position: relative;
+    background: #fff;
+    font-size: 14px;
+    color: #2d2d2d;
+    list-style: none;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    color: #2D2D2C;
+}
+.bge{
+    height: 100%;
+    min-height: 600px;
+}
+
+
+.div-nav-default{
+    width: 100%;
+    height: 72px;
+    padding: 0 2%;
+    font-size: 16px;
+    top: 0;
+    position: fixed;
+    box-shadow: 0 0 1px #cccccc;
+    box-sizing: border-box;
+    background-color: white;
+    z-index: 1000;
+}
+/*左菜单*/
+.ul-nav-menu-left{
+    margin-left: 0;
+    margin-top: 5px;
+    float: left;
+}
+.ul-nav-menu-left>li{
+    float: left;
+}
+.li-nav-item{
+    margin: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+}
+.ul-nav-menu-left .li-nav-item a{
+    padding-bottom: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.li-nav-item a.active{
+    border-bottom: 4px solid #2C58AB;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+/*右菜单*/
+.ul-nav-menu-right{
+    margin-right: 0;
+    margin-top: 8px;
+    float: right;
+}
+.ul-nav-menu-right>li{
+    float: left;
+}
+.ul-tool{
+    padding: 8px 0;
+    box-shadow: 0 0 20px rgba(0,0,0,.35);
+    position: absolute;
+    width: 120px;
+    background: #fff;
+    list-style: none;
+    z-index: 10;
+    top: 50px;
+    text-align: center;
+}
+.tool>ul>li:hover{
+    background-color: #cccccc;
+}
+.user>a img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-top: -3px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.div-notice{
+    z-index: 10;
+    position: fixed;
+    right: 31px;
+    top: 71px;
+    background: #FFF;
+    width: 343px;
+    border: 1px solid #DCDCDC;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    border-radius: 5px;
+}
+.div-notice .zw{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #2D2D2C;
+    font-size: 16px;
+    min-height: 260px;
+}
+.div-notice .div-operation{
+    height: 44px;
+    background: #f2f2f2;
+    border-radius: 5px;
+}
+.div-operation>a{
+    float: left;
+    display: block;
+    height: 15px;
+    font-size: 16px;
+    line-height: 50px;
+    color: #999;
+    text-indent: 42px;
+}
+.div-operation .div-operation-check{
+    float: right;
+    margin-right: 42px;
+}
+.ul-user-info{
+    position: absolute;
+    width: 160px;
+    padding: 8px 0;
+    left: -110px;
+    top: 45px;
+    text-align: center;
+    z-index: 1000;
+    background: #FFF;
+    box-shadow: 0 0 20px rgba(0,0,0,.35);
+}
+.ul-user-info>ul{
+    list-style: none;
+}
+.ul-user-info>ul>li>a:hover{
+    color: deepskyblue;
+}
+.left-return{
+    position: absolute;
+    top: 24px;
+    left: 2%;
+    height: 24px;
+    display: block;
+}
+.returnLogo{
+    width: 27px;
+    display: inline-block;
+    height: 25px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.courseName{
+    padding: 0 10px;
+    border-radius: 15px;
+    font-size: 16px;
+    line-height: 32px;
+    background: #2c58ab;
+    cursor: pointer;
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 80px;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    margin-left: 20px;
+}
+.nav-middle{
+    width: 60%;
+    height: 72px;
+    margin-left: 250px;
+    text-align: center;
+    float: left;
+}
+.nav-middle>a{
+    height: 72px;
+    min-width: 80px;
+    line-height: 72px;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #2D2D2C;
+    display: inline-block;
+    text-align: center;
+}
+.nav-middle a.choose{
+    border-bottom: 4px solid #2C58AB;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+
+
+
+/*作业批改框架*/
+.wrap{
+    display: block;
+    background: white;
+    border: 1px solid #aaaaaa;
+    width: 1020px;
+    position: relative;
+    margin: 100px  auto;
+}
+.header{
+    padding: 38px 30px 27px;
+    height: 80px;
+    position: relative;
+    border-bottom: 1px solid #aaaaaa;
+    border-bottom: none;
+}
+.header-title{
+    display: inline-block;
+    width: 100%;
+}
+.header-title>h2{
+    font-size: 18px;
+    color: #2D2D2C;
+    display: inline-block;
+}
+.header-title>div{
+    height: 26px;
+    line-height: 26px;
+    display: block;
+    float: right;
+    text-align: center;
+    background-color: #f2f2f2;
+    color: #2D2D2C;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 0 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cccccc;
+}
+.operation{
+    display: block;
+    padding-top: 25px;
+}
+.operation>p{
+    width: 170px;
+    padding: 5px 20px;
+    margin-right: 10px;
+    background: #E2E6ED;
+    float: left;
+}
+.search>input{
+    width: 130px;
+    font-size: 14px;
+    height: 20px;
+    float: right;
+    padding: 3px 20px;
+}
+.showScores{
+    min-width: 140px;
+    height: 30px;
+    position: relative;
+    float: right;
+    padding-right: 20px;
+}
+.showScores>span{
+    display: block;
+    text-indent: 20px;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    background: #409EFF;
+    cursor: pointer;
+    font-size: 12px;
+}
+.showBox{
+    position: absolute;
+    top: 30px;
+    padding: 5px 0;
+    min-width: 140px;
+    background: white;
+    border: 1px solid #DCDCDC;
+    z-index: 5;
+    box-shadow: 1px 2px 4px #cccccc;
+}
+.showBox>a{
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    color: #2D2D2C;
+    padding-left: 15px;
+    font-size: 12px;
+}
+.showBox>a:hover{
+    background: #dddddd;
+}
+.copy{
+    height: 30px;
+    line-height: 15px;
+    margin-right: 15px;
+    float: right;
+    color: #999;
+    padding-left: 20px;
+    cursor: pointer;
+    padding-top: 10px;
+}
+
+
+
+/*批改作业*/
+.correction{
+    display: block;
+    background: white;
+    border-top: 1px solid #aaaaaa;
+    width: 1020px;
+}
+.fold{
+    float: right;
+    color: #aaaaaa;
+    margin-right: 30px;
+    font-size: 12px;
+    line-height: 45px;
+}
+.correction-tipInfo{
+    padding: 0 28px;
+    color: #aaaaaa;
+    background: white;
+    line-height: 45px;
+    font-size: 12px;
+}
+.correction-tip{
+    background: white;
+    margin: 0 30px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+}
+.tip{
+    border-bottom: 1px dashed #cccccc;
+    display: inline-block;
+    width: 100%;
+}
+.tip>dt{
+    color: #2D2D2C;
+    line-height: 45px;
+    height: 45px;
+    width: 150px;
+    border-right: 1px solid #DCDCDC;
+    background: #f2f2f2;
+    text-indent: 30px;
+    font-size: 12px;
+    margin-right: 36px;
+    border-bottom: 1px dashed #DCDCDC;
+    margin-bottom: -1px;
+    float: left;
+}
+.unlimited{
+    cursor: pointer;
+    background: #32BAF0;
+    color: #ffffff;
+    border-color: #32BAF0;
+    border-radius: 3px;
+    width: 48px;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 8px;
+    margin-right: 30px;
+    margin-left: 20px;
+    font-size: 12px;
+    float: left;
+    text-align: center;
+}
+.tipunlimited{
+    cursor: pointer;
+    background: #32BAF0;
+    color: #ffffff;
+    border-color: #32BAF0;
+    border-radius: 3px;
+    width: 48px;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 8px;
+    margin-right: 30px;
+    margin-left: 20px;
+    font-size: 12px;
+    float: left;
+    text-align: center;
+}
+.tip>dd{
+    padding-left: 25px;
+    font-size: 12px;
+    color: #aaaaaa;
+    border-radius: 3px;
+    height: 45px;
+    line-height: 40px;
+    width: 83px;
+    cursor: pointer;
+    float:left;
+}
+.tip>dd:hover{
+    color: #32BAF0;
+}
+
+.tip-hide{
+    border-bottom: 1px dashed #cccccc;
+    display: inline-block;
+    width: 100%;
+}
+.corrCount{
+    margin-top: 4px;
+    border-bottom: none;
+}
+.tip-hide>dt{
+    color: #2D2D2C;
+    line-height: 45px;
+    height: 45px;
+    width: 150px;
+    border-right: 1px solid #DCDCDC;
+    background: #f2f2f2;
+    text-indent: 30px;
+    font-size: 12px;
+    margin-right: 36px;
+    border-bottom: 1px dashed #DCDCDC;
+    margin-bottom: -1px;
+    float: left;
+}
+.div-dd>input{
+    text-align: center;
+    width: 48px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #dddddd;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.div-dd>span{
+    width: 10px;
+    overflow: hidden;
+    line-height: 10px;
+}
+.div-dd>a{
+    color: #aaaaaa;
+    margin-left: 5px;
+}
+.div-dd>a:hover{
+    color: #32BAF0;
+}
+
+
+
+/*分类排序*/
+.category{
+    padding: 20px 0;
+    position: relative;
+    margin: 0 30px;
+}
+.category-ul{
+    height: 40px;
+    border: 1px solid #DCDCDC;
+    background: #E2E6ED;
+}
+.category-ul>li{
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 40px;
+    font-size: 12px;
+}
+.category-ul>li>a:hover{
+    color: #32BAF0;
+}
+.select{
+    background: white;
+    border-right: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+}
+.select>a{
+    color: #32BAF0;
+}
+
+
+/*批改作业信息*/
+.corList{
+    margin: 0 30px 60px;
+}
+.corListTable{
+    width: 100%;
+}
+.corListTable-top{
+    background: #DCDCDC;
+    border:  1px solid #cccccc;
+    margin-bottom: -1px;
+    height: 58px;
+    line-height: 58px;
+}
+.top-ul{
+    margin-right: 20px;
+    float: left;
+}
+.top-ul>li{
+    float: left;
+    list-style: none;
+}
+.checkBox{
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin-top: 20px;
+    margin-left: 12px;
+    cursor: default;
+}
+.corOperation{
+    top: 14px;
+    float: left;
+    padding-right: 10px;
+    position: relative;
+}
+.btn1{
+    float: left;
+    border: none;
+    background: #32BAF0;
+    font-size: 12px;
+    color: white;
+    height: 32px;
+    min-width: 75px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 15px;
+    line-height: 30px;
+    border-radius: 3px;
+}
+.disable{
+    cursor: default;
+    background: cornflowerblue;
+}
+
+.copy{
+    float: right;
+    padding-right: 20px;
+}
+.copy>p{
+    color: firebrick;
+    line-height: 40px;
+}
+
+.div-giveScores{
+    width: 130px;
+    position: absolute;
+    right: 145px;
+    top: 46px;
+    padding: 5px 0;
+    background: white;
+    border: 1px solid #DCDCDC;
+    box-shadow: 1px 2px 4px #cccccc;
+    z-index: 1000;
+}
+.div-giveScores>a{
+    display: block;
+    padding-left: 24px;
+    height: 37px;
+    line-height: 37px;
+    color: #2d2d2d;
+}
+.div-giveScores>a:hover{
+    background: #ccdddd;
+    color: #32BAF0;
+}
+.div-download{
+  right: 10px;
+}
+
+.out{
+    margin: 0 auto;
+    width: 350px;
+    height: 270px;
+    top: 38px;
+    left: 480px;
+    background: white;
+    box-shadow: 1px 1px 50px #cccccc;
+    z-index: 10000;
+}
+.Rtop{
+    font-size: 18px;
+    height: 66px;
+    line-height: 66px;
+    background: white;
+    color: #999999;
+    padding-left: 28px;
+    border-bottom: 1px solid #ffffff;
+    cursor: move;
+}
+.Rmiddle{
+    height: 270px;
+    position: relative;
+}
+.middleContent{
+    padding-left: 26px;
+    padding-top: 10px;
+}
+.Rtitle{
+
+    color: #2d2d2d;
+    border-bottom: 1px solid #DCDCDC;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    margin-left: -25px;
+    padding-right: 85px;
+}
+.Rreaosn{
+    height: 32px;
+    width: 300px;
+    border-bottom: 1px solid #DCDCDC;
+    color: #2D2D2C;
+    box-sizing: border-box;
+    margin-top: 15px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+.Rbtn{
+    padding-right: 26px;
+    margin-top: 15px;
+    height: 38px;
+    text-align: right;
+    padding-bottom: 26px;
+}
+.Rbtn>a{
+    display: inline-block;
+    width: 85px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 3px;
+}
+.Rbtn>a:hover{
+    background: #DCDCDC;
+}
+.Rbtn>a.active{
+    background: #32BAF0;
+    color: white;
+}
+/*作业*/
+.approved{
+    /*display: none;*/
+    width: 960px;
+}
+.done-div{
+    display: none;
+    width: 960px;
+}
+.notDone-div{
+    display: none;
+    width: 960px;
+}
+.unSubmit-div{
+    display: none;
+    width: 960px;
+}
+.approved dl dd{
+    cursor: default;
+}
+.homeworkmanage{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    background: #FFF;
+    border-top: 1px #dcdcdc solid;
+    border-bottom: 1px #dcdcdc solid;
+    border-left: 1px #dcdcdc solid;
+    border-right: 1px #dcdcdc solid;
+    position: relative;
+    min-height: 58px;
+    margin-bottom: -1px;
+}
+/*.sequence{*/
+/*    float: left;*/
+/*    width: 30px;*/
+/*}*/
+/*.radio{*/
+/*    display: block;*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*    margin-left: 12px;*/
+/*    margin-top: 20px;*/
+/*}*/
+/*.left{*/
+/*    width: 12%;*/
+/*    height: 58px;*/
+/*    line-height: 58px;*/
+/*    text-align: left;*/
+/*    padding-left: 13px;*/
+/*    box-sizing: border-box;*/
+/*    font-size: 0;*/
+/*    font-weight: 400;*/
+/*}*/
+/*.left>stu-num{*/
+/*    max-width: 124px;*/
+/*    width: 120px;*/
+/*    margin-right: 10px;*/
+/*    color: #595959;*/
+/*    vertical-align: top;*/
+/*    text-align: left;*/
+/*    font-size: 14px;*/
+/*    display: inline-block;*/
+/*}*/
+/*.left>text-overflow{*/
+/*    white-space: nowrap;*/
+/*    overflow: hidden;*/
+/*    text-overflow: ellipsis;*/
+/*}*/
+/*.usernamegai{*/
+/*    width: 12%;*/
+/*    height: 58px;*/
+/*    line-height: 58px;*/
+/*    text-align: left;*/
+/*    padding-left: 13px;*/
+/*    box-sizing: border-box;*/
+/*    font-weight: 400;*/
+/*    font-size: 0;*/
+/*}*/
+/*.usernamegai stu-name{*/
+/*    width: 80px;*/
+/*    font-weight: 700;*/
+/*    color: #2D2D2D;*/
+/*    vertical-align: top;*/
+/*    text-align: left;*/
+/*    font-size: 14px;*/
+/*    display: inline-block;*/
+/*}*/
+/*.usernamegai text-overflow{*/
+/*    white-space: nowrap;*/
+/*    overflow: hidden;*/
+/*    text-overflow: ellipsis;*/
+/*}*/
+/*.colaa-batscore-fraction{*/
+/*    text-align: left;*/
+/*    margin-right: 20px;*/
+/*    width: 104px;*/
+/*    color: #AAA;*/
+/*    height: 58px;*/
+/*    line-height: 58px;*/
+/*    font-weight: 400;*/
+/*}*/
+/*.colaa-batscore-fraction span{*/
+/*    display: inline-block;*/
+/*    cursor: text;*/
+/*    height: 24px;*/
+/*    line-height: 24px;*/
+/*    width: 60px;*/
+/*    font-size: 18px;*/
+/*    margin: 15px auto 0;*/
+/*    text-align: center;*/
+/*    overflow: hidden;*/
+/*    color: #5A5A5A;*/
+/*    border-bottom: 1px #818181 solid;*/
+/*    vertical-align: top;*/
+/*}*/
+.sequence{
+    float: left;
+    width: 30px;
+    height: 58px;
+    line-height: 58px;
+}
+.sequence input{
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-left: 12px;
+    margin-top: 20px;
+}
+.left{
+    float: left;
+    width: 115px;
+    height: 58px;
+    line-height: 58px;
+    text-align: left;
+    padding-left: 13px;
+}
+.left span{
+    max-width: 124px;
+    width: 120px;
+    margin-right: 10px;
+    color: #595959;
+}
+.usernamegai{
+    float: left;
+    width: 115px;
+    height: 58px;
+    line-height: 58px;
+}
+.usernamegai span{
+    font-weight: 700;
+    color: #2D2D2D;
+    font-size: 14px;
+}
+.colaa-batscore-fraction{
+    float: left;
+    width: 104px;
+    height: 58px;
+    line-height: 58px;
+    text-align: left;
+    margin-right: 20px;
+}
+.un-colaa-batscore-fraction{
+    color: red;
+    font-size: 18px;
+}
+.colaa-batscore-fraction input{
+    display: inline-block;
+    cursor: text;
+    height: 24px;
+    line-height: 24px;
+    width: 60px;
+    font-size: 18px;
+    margin: 15px auto 0;
+    text-align: center;
+    overflow: hidden;
+    color: #5A5A5A;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    outline: none;
+    color: #AAA;
+    border-bottom: 1px #818181 solid;
+    vertical-align: top;
+}
+.colaa-similarity{
+    float: left;
+    width: 55px;
+    height: 58px;
+    line-height: 58px;
+    margin-right: 20px;
+    font-size: 18px;
+}
+.colaa-similarity span{
+    float: left;
+    color: #AAA;
+    width: 55px;
+    height: 58px;
+    line-height: 58px;
+    margin-right: 20px;
+    font-size: 18px;
+}
+.colaa-ontime{
+    float: left;
+    text-align: left;
+    color: #AAA;
+    width: 140px;
+    height: 58px;
+    line-height: 58px;
+}
+.colaa-homeworkNumber{
+    color: #AAA;
+    text-align: center;
+    float: left;
+    width: 85px;
+    height: 58px;
+    line-height: 58px;
+}
+.colaa-cishu-help-info-tips{
+    float: left;
+    width: 85px;
+    text-align: center;
+    color: #AAA;
+    height: 58px;
+    line-height: 58px;
+}
+.colaa-piyue-time{
+    float: right;
+    margin-right: 20px;
+    /*color: #AAA;*/
+    width: 115px;
+    text-align: center;
+    height: 58px;
+    line-height: 58px;
+}
+.colaa-piyue-time a{
+    color: red;
+}
+.colaa-piyue{
+    float: right;
+    margin-right: 20px;
+    color: #AAA;
+    width: 115px;
+    text-align: center;
+    height: 58px;
+    line-height: 58px;
+}
+.colaa-piyue a{
+    cursor: pointer;
+    font-size: 16px;
+    color: #4D90FE;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+body{
+    position: relative;
+    background: #fff;
+    font-size: 14px;
+    color: #2d2d2d;
+    list-style: none;
+    width: 100%;
+    height: 1080px;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    color: #2D2D2C;
+}
+li{
+    list-style: none;
+}
+.bge{
+    height: 100%;
+    min-height: 600px;
+}
+.div-nav-default{
+    width: 100%;
+    height: 72px;
+    padding: 0 2%;
+    font-size: 16px;
+    top: 0;
+    position: fixed;
+    box-shadow: 0 0 10px #cccccc;
+    box-sizing: border-box;
+    background-color: white;
+    z-index: 1000;
+}
+/*左菜单*/
+.ul-nav-menu-left{
+    margin-left: 0;
+    margin-top: 5px;
+    float: left;
+}
+.ul-nav-menu-left>li{
+    float: left;
+}
+.li-nav-item{
+    margin: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+}
+.ul-nav-menu-left .li-nav-item a{
+    padding-bottom: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.li-nav-item a.active{
+    border-bottom: 4px solid #2C58AB;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+/*右菜单*/
+.ul-nav-menu-right{
+    margin-right: 0;
+    margin-top: 8px;
+    float: right;
+}
+.ul-nav-menu-right>li{
+    float: left;
+}
+.tool>ul{
+    padding: 8px 0;
+    box-shadow: 0 0 20px rgba(0,0,0,.35);
+    position: absolute;
+    width: 120px;
+    list-style: none;
+    z-index: 3;
+    top: 50px;
+    text-align: center;
+}
+.tool>ul>li:hover{
+    background-color: #cccccc;
+}
+.user>a img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-top: -3px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.div-notice{
+    z-index: 10000;
+    position: fixed;
+    right: 31px;
+    top: 71px;
+    background: #FFF;
+    width: 343px;
+    border: 1px solid #DCDCDC;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    border-radius: 5px;
+}
+.div-notice .zw{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #2D2D2C;
+    font-size: 16px;
+    min-height: 260px;
+}
+.div-notice .div-operation{
+    height: 44px;
+    background: #f2f2f2;
+    border-radius: 5px;
+}
+.div-operation>a{
+    float: left;
+    display: block;
+    height: 15px;
+    font-size: 16px;
+    line-height: 50px;
+    color: #999;
+    text-indent: 42px;
+}
+.div-operation .div-operation-check{
+    float: right;
+    margin-right: 42px;
+}
+.ul-user-info{
+    position: absolute;
+    width: 160px;
+    padding: 8px 0;
+    left: -110px;
+    top: 45px;
+    text-align: center;
+    z-index: 1000;
+    background: #FFF;
+    box-shadow: 0 0 20px rgba(0,0,0,.35);
+}
+.ul-user-info>ul{
+    list-style: none;
+}
+.ul-user-info>ul>li>a:hover{
+    color: deepskyblue;
+}
+
+/*轮播图*/
+.banner{
+    width: 1380px;
+    height: 520px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 76px;
+}
+.imglist{
+    width:5520px;
+    height: 520px;
+}
+.imglist>li{
+    float: left;
+}
+.iconlist{
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+.iconlist>li{
+    float: left;
+    width: 25px;
+    height: 25px;
+    border-radius: 13px;
+    text-align: center;
+    line-height: 25px;
+    margin-left: 2px;
+    color: floralwhite;
+    cursor: pointer;
+}
+
+.middle{
+    padding: 0 5%;
+    align-items: center;
+    height: 60px;
+}
+.middle>ul{
+    line-height: 60px;
+}
+.middle>ul>li{
+    float: left;
+    font-size: 18px;
+    color: #999999;
+    padding: 0 2%;
+    margin-left: 25px;
+}
+.active{
+    border-bottom:  3px solid #318ECB;
+}
+.middle>div{
+    width: 280px;
+    height: 40px;
+    background: #DCDCDC;
+    border-radius: 4px;
+    padding: 0 8px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    float: right;
+    margin-top: 8px;
+}
+.middle>div>input{
+    width: 240px;
+    cursor: text;
+    border: none;
+    font-size: 14px;
+    background: 0 0;
+    line-height: 40px;
+}
+.courseBox{
+    background: #f2f2f2;
+    min-height: 500px;
+    width: 100%;
+    float: left;
+}
+.courseBox-top>ul>li{
+    float: left;
+    padding: 5px 10px;
+    margin-left: 30px;
+    margin-top: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.courseBox-top>ul>li.act{
+    background: #32BAF0;
+    border-radius: 10px;
+    color: white;
+}
