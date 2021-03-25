@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>成员-简单好用的互动课堂管理工具</title>
+    <link type="text/css" rel="stylesheet" href="../resources/css/member.css">
+</head>
+<body>
+<!--包含整个网页内容的大盒子-->
+<div class="main">
+    <!--头部-->
+    <div class="top">
+        <!-- logo -->
+        <div class="topLeft">
+            <a href="#" class="logo">
+                <img src="../resources/img/assets/returnReg.png">
+            </a>
+            <a href="/teachercourse" class="span">
+                <span> &nbsp;课堂&nbsp;</span>
+            </a>
+        </div>
+        <!-- 导航栏 -->
+        <div class="topNavigation">
+            <ul>
+                <li class="topNavigationMember">
+                    <a href="/">成员</a>
+                </li>
+                <li>
+                    <a href="/">分组</a>
+                </li>
+                <li>
+                    <a href="/">成绩</a>
+                </li>
+            </ul>
+        </div>
+        <div class="topRight">
+            <!--工具-->
+            <div class="tool1">
+                <a href="#">
+                    <img src="../resources/img/tool.jpg" class="tool_icon">
+                </a>
+            </div>
+            <!-- 消息通知 -->
+            <div class="newsOpen">
+                <a href="#">
+                    <img src="../resources/img/notice.jpg" id="naozhong">
+                </a>
+                <!-- 消息通知弹出框 -->
+                <div id="news">
+                    <span class="newsTitle">暂无新通知</span>
+                    <div class="newsDown">
+                        <a href="#" class="newsLeft">全部标记已读</a>
+                        <a href="#" class="newsRight">查看全部</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 头部右边 -->
+            <!-- 个人头像 -->
+            <div class="touxiangBox">
+                <a href="#">
+                    <img src="../resources/img/user.jpg" id="touxiang">
+                </a>
+                <!-- 点击弹出列表框 -->
+                <div id="people">
+                    <ul>
+                        <li class="item4">
+                            <a href="#"><img src="../resources/img/vip.png" class="vip"> <span
+                                    style="margin-left: 40px;">开通VIP</span></a>
+                        </li>
+                        <li class="item4">
+                            <a href="#"><img src="../resources/img/mechanismNo.png" class="mechanismNo"> <span
+                                    style="margin-left: 70px;">机构账号绑定</span></a>
+                        </li>
+                        <li class="item4">
+                            <a href="#"><img src="../resources/img/seting.png" class="vip"> <span
+                                    style="margin-left: 40px;">个人设置</span></a>
+                        </li>
+                        <li class="item4">
+                            <a href="#"><img src="../resources/img/recode_2.png" class="recode_2"> <span
+                                    style="margin-left: 40px;">邀请记录</span></a>
+                        </li>
+                        <li class="item4" id="log-out">
+                            <a href="#"><img src="../resources/img/return.png" class="vip"> <span
+                                    style="margin-left: 40px;">退出登录</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- 中部 -->
+    <div class="content">
+        <div class="contentTop">
+            <!-- 左边按钮 -->
+            <div class="contentTopLeft">
+                <a href="#">
+                    <div class="join">
+                        <span class="span3">导入成员</span>
+                    </div>
+                </a>
+                <div class="xiazai">
+                    <img src="../resources/img/seeStudent/xiazai.png">
+                </div>
+                <a href="#" class="download">下载成员信息</a>
+                <div class="biao">
+                    <img src="../resources/img/seeStudent/biao.png">
+                </div>
+                <a href="#" class="table">成员退课记录
+                </a>
+            </div>
+            <!-- 右边查询框 -->
+            <div class="textBox">
+                <input placeholder="姓名、学号" type="text" class="input">
+                <a href="#">
+                    <img src="../resources/img/seeStudent/se_s.png">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- 表格部分 -->
+    <div class="contentMain">
+        <div class="contentMainBox">
+            <!-- 左边菜单 -->
+            <div class="contentMainLeft">
+                <ul class="navigation">
+                    <li class="" style="border-top-left-radius: 10px;">教学团队（<i class="teacher-team-num" id="teacher-team-num"></i>）
+                    </li>
+                    <li class="choose">全部学生(学生<i class="student-team-num" id="student-team-num"></i>)</li>
+                </ul>
+            </div>
+
+            <!-- 右边显示内容框 -->
+            <div class="contentMainRight">
+                <div class="list2 " id="list2 " style="display: none;">
+                    <div class="rightTopStudent">
+                        <span class="span1">教学团队（老师<i class="teacher-team-right-num" id="teacher-team-right-num"></i>）</span>
+                        <a href="#">
+                            <div class="joinTeacher">
+                                <img src="../resources/img/seeStudent/tianjia.png" class="tianjia">
+                                <span class="span2">添加助教/老师</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="teacherBox" id="teacherBox">
+                       <!-- <div class="teacher">
+                            <img src="../resources/img/seeStudent/34.png" class="touxiang1">
+                            <span class="span4">张三</span>
+                            <span class="span5">18225283099&nbsp;&nbsp;&nbsp;（管理员）</span>
+                            <a href="#">
+                                <img src="../resources/img/seeStudent/opt1.png" class="opt1">
+                            </a>
+                            <a href="#">
+                                <img src="../img/seeStudent/sixin.png" class="sixin">
+                            </a>
+                        </div>-->
+                    </div>
+                </div>
+
+                <!-- 学生表格界面 -->
+                <div class="list2" style="">
+                    <div class="rightTopStudent">
+                        <span class="span1">全部学生（学生<i class="student-team-right-num" id="student-team-right-num"></i>）</span>
+                        <span class="span7"> 不允许退课</span>
+                        <!-- 开关按钮 -->
+                        <div class="switch-btn">
+                            <input type="checkbox" class="hidden-checkbox" name="" value="">
+                            <span class="switch-area"></span>
+                            <span class="switch-toggle"></span>
+                        </div>
+                        <span class="span7">人数限制 </span>
+                        <div class="checkBox checkbox2">
+                            <input type="checkbox">
+                        </div>
+
+                    </div>
+                    <div class="rightTop" style="background-color: white;border-bottom: 1px solid gainsboro;">
+                        <div class="checkBox allCheck">
+                            <input type="checkbox" id="selectAll">
+                        </div>
+                        <span id="pp">本页全选 </span>
+                        <a href="#">
+                            <div class="delete" id="deleteMember">
+                                <span class="span6">删除成员</span>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="send" id="sendMessage">
+                                <span class="span6">群发私信</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contentTable">
+                        <table border="" rules="cols" cellspacing="0">
+                            <tbody id="studentBox">
+<!--                            <tr>-->
+<!--                                <td class="checkBox">-->
+<!--                                    <input type="checkbox" name="gg" class="tableCheck">-->
+<!--                                </td>-->
+<!--                                <td>-->
+<!--                                    <img src="../img/seeStudent/34.png" class="touxiang2">-->
+<!--                                </td>-->
+<!--                                <td>91721380139</td>-->
+<!--                                <td>李四</td>-->
+<!--                                <td>134567890qq.com</td>-->
+<!--                                <td>2020/5/1 21:00</td>-->
+<!--                                <td>-->
+<!--                                    <a href="#">-->
+<!--                                        <img src="../resources/img/seeStudent/opt1.png" class="opt1">-->
+<!--                                    </a>-->
+<!--                                    <a href="#">-->
+<!--                                        <img src="../resources/img/seeStudent/sixin.png" class="sixin">-->
+<!--                                    </a>-->
+<!--                                </td>-->
+<!--                            </tr>-->
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../resources/js/common/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../resources/js/common/common.js"></script>
+<script type="text/javascript" src="../resources/js/teacher/member.js"></script>
+<script type="text/javascript" src="../resources/js/teacher/memberlist.js"></script>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>-简单好用的互动课堂管理工具</title>
+    <link type="text/css" rel="stylesheet" href="../resources/css/muke.css">
+</head>
+<body>
+<div class="bge">
+    <!--导航-->
+    <div class="div-nav-default">
+        <!--    左菜单-->
+        <ul class="ul-nav-menu-left" id="ul-nav-menu">
+            <li class="li-nav-item logo">
+                <img src="../resources/img/logo.jpg" width="96px" height="24px" id="left-menu-logo">
+            </li>
+            <li class="li-nav-item">
+                <a href="/teachercourse"  id="left-menu-ketang">课堂
+                    <img src="../resources/img/hot.jpg" style="width: 21px;height: 10px;vertical-align: top;">
+                </a>
+            </li>
+            <li class="li-nav-item">
+                <a href="/muke" id="left-menu-muke">精品慕课</a>
+            </li>
+            <li class="li-nav-item">
+                <a href="/myjingpin" id="left-menu-jingpin">我的精品</a>
+            </li>
+            <li class="li-nav-item">
+                <a href="/shuangxuanhui" id="left-menu-shuangxuanhui" class="active">双选会</a>
+            </li>
+            <li class="li-nav-item">
+                <a href="/papermanage" id="left-menu-paper">论文管理</a>
+            </li>
+        </ul>
+        <!--    右菜单-->
+        <ul class="ul-nav-menu-right">
+            <!--        工具-->
+            <li class="li-nav-item tool">
+                <a>
+                    <img src="../resources/img/tool.jpg" id="tool"></a>
+
+                <ul style="display: none;background-color: #ffffff"  id="ul-tool" class="ul-tool">
+                    <li><a href="#">论文查重</a></li>
+                    <li><a href="#">学术存证</a></li>
+                </ul>
+            </li>
+            <!--        通知-->
+            <li class="li-nav-item notice">
+                <a><img src="../resources/img/notice.jpg" id="notice"></a>
+                <div class="div-notice" style="display: none;" id="divnotice">
+                    <p class="zw">暂无新通知</p>
+                    <div class="div-operation">
+                        <a id="ignore-all" class="div-operation-ignoreall">全部标记已读</a>
+                        <a id="check-all" class="div-operation-check">查看全部</a>
+                    </div>
+                </div>
+            </li>
+            <!--        用户信息-->
+            <li class="li-nav-item user">
+                <a class="user"><img src="../resources/img/user.jpg" id="info"></a>
+                <div class="ul-user-info" id="userinfo" style="display: none;">
+                    <ul>
+                        <li id="user-setting"><a>个人设置</a></li>
+                        <li id="log-out"><a>退出账户</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+<!--    轮播图-->
+    <div class="banner" id="banner">
+        <ul class="imglist" id="imglist">
+            <li><a href="#"><img src="../resources/img/banner1.png" alt=""></a></li>
+            <li><a href="#"><img src="../resources/img/banner2.png" alt=""></a></li>
+            <li><a href="#"><img src="../resources/img/banner3.png" alt=""></a></li>
+        </ul>
+        <ul class="iconlist" id="iconlist">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+    <div class="middle">
+        <ul>
+            <li class="active">北大华文慕课</li>
+            <li>在线课程</li>
+            <li>文库</li>
+        </ul>
+        <div>
+            <input type="text" placeholder="搜索课程名称、老师姓名、关键词">
+        </div>
+    </div>
+    <div class="courseBox">
+        <div class="courseBox-top">
+            <ul>
+                <li>全部课程</li>
+                <li>计算机</li>
+                <li>力学</li>
+                <li>工程</li>
+                <li>法律</li>
+                <li>文学</li>
+                <li>历史</li>
+                <li>哲学</li>
+                <li>经济学</li>
+                <li>管理学</li>
+                <li>教育</li>
+                <li class="act">体育</li>
+                <li>艺术</li>
+                <li>医学</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="../resources/js/common/common.js"></script>
+<script type="text/javascript">
+    //获取图片标签
+    var imgs=document.getElementById('imglist').getElementsByTagName('li');
+    //获取列表
+    var icons=document.getElementById('iconlist').getElementsByTagName('li');
+    //初始化图片位置
+    var left=0;
+    imglist.style.marginLeft=left+"px";
+    //设置一个计时器
+    var timer;
+    //自调用
+    run();
+    function run() {
+        if (left<=-4140){
+            imglist.style.marginLeft="0px";
+            left=0;
+        }
+        // 如果位置为整张图片，暂停1s
+        var n=(left%1380==0)?1000:5;
+        changeimg();
+        //计算图片的下标
+
+        var m=Math.floor(-left/1380);
+        changeicon(m);
+
+        left-=3;
+        //使用settimeout（）
+        timer=setTimeout(run,n)
+    }
+    function changeimg() {
+        imglist.style.marginLeft=left+"px";
+    }
+    function changeicon(m) {
+        for (var i=0;i<icons.length;i++){
+            icons[i].style.backgroundColor="";
+        }
+        icons[m].style.backgroundColor="red";
+    }
+    //绑定图片事件
+    for (var i=0;i<imgs.length;i++){
+        //鼠标移上图片闪动，且图片轮播越来越快，所以使用闭包解决 将函数里的匿名函数拿到外部解决,函数内部外部作用域的原因
+        (function (i) {
+            imgs[i].onmousemove = function () {
+                clearTimeout(timer);
+                left = -i * 1380;
+                changeimg();
+                changeicon(i);
+            }
+            imgs[i].onmouseout = function () {
+                run();
+            }
+        })(i)
+    }
+    //下标悬浮效果，同上
+    for (var i=0;i<icons.length;i++){
+        //鼠标移上图片闪动，且图片轮播越来越快，所以使用闭包解决 将函数里的匿名函数拿到外部解决,函数内部外部作用域的原因
+
+        (function (i) {
+            icons[i].onmousemove = function () {
+                clearTimeout(timer);
+                left = -i * 1380;
+                changeimg();
+                changeicon(i);
+            }
+            icons[i].onmouseout = function () {
+                run();
+            }
+        })(i)
+    }
+
+
+    // 工具
+    var Tool=document.getElementById('tool');
+    var Ultool=document.getElementById('ul-tool');
+    Tool.onclick=function (aaa) {
+        if (Ultool.style.display=='none')
+        {
+            Ultool.style.display='block';
+        }
+        else {
+            Ultool.style.display='none';
+        }
+
+    }
+
+    // 通知
+    var Nitice=document.getElementById('notice');
+    var Divnotice=document.getElementById('divnotice');
+    Nitice.onclick=function (bbb) {
+        if (Divnotice.style.display=='none')
+        {
+            Divnotice.style.display='block';
+        }
+        else {
+            Divnotice.style.display='none';
+        }
+    }
+    // 个人信息
+    var Info=document.getElementById('info');
+    var Userinfo=document.getElementById('userinfo');
+    Info.onclick=function (ccc) {
+        if (Userinfo.style.display=='none')
+        {
+            Userinfo.style.display='block';
+        }
+        else {
+            Userinfo.style.display='none';
+        }
+    }
+</script>
+
+</body>
+</html>

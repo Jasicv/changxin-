@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生上传作业</title>
+    <link type="text/css" rel="stylesheet" href="../resources/css/studentuphomework.css">
+</head>
+<body>
+<div class="main">
+    <!--头部-->
+    <div class="top">
+        <!-- logo -->
+        <a>
+            <img src="../resources/img/seeStudent/fanhui.png" class="logo">
+            <span class="span" id="span" >课堂&nbsp;</span>
+        </a>
+        <!-- 导航栏 -->
+        <ul class="topUl">
+            <li class="studentTask">
+                <a href="#">提交作业</a>
+            </li>
+            <li>
+                <a href="#">作业讨论</a>
+            </li>
+        </ul>
+        <!-- 头部右边 -->
+        <!-- 个人头像 -->
+        <div class="touxiangBox">
+            <a href="#">
+                <img src="../resources/img/teacherLogin/home/touxiang.png" id="touxiang">
+            </a>
+            <!-- 点击弹出列表框 -->
+            <div class="ul-user-info" id="people" style="display: none">
+                <ul>
+                    <li id="user-setting"><a>个人设置</a></li>
+                    <li id="log-out"><a>退出账户</a></li>
+                </ul>
+            </div>
+<!--            <div id="people">-->
+<!--                <ul>-->
+<!--                    <li class="item4">-->
+<!--                        <a href="#" ><img src="../resources/img/teacherLogin/home/vip.png" class="vip"> <span style="margin-left: 40px;">开通VIP</span></a>-->
+<!--                    </li>-->
+<!--                    <li class="item4">-->
+<!--                        <a href="#" ><img src="../resources/img/teacherLogin/home/mechanismNo.png" class="mechanismNo"> <span style="margin-left: 40px;">机构账号绑定</span></a>-->
+<!--                    </li>-->
+<!--                    <li class="item4">-->
+<!--                        <a href="#" ><img src="../resources/img/teacherLogin/home/seting.png" class="vip"> <span style="margin-left: 40px;">个人设置</span></a>-->
+<!--                    </li>-->
+<!--                    <li class="item4">-->
+<!--                        <a href="#" ><img src="../resources/img/teacherLogin/home/recode_2.png" class="recode_2"> <span style="margin-left: 40px;">邀请记录</span></a>-->
+<!--                    </li>-->
+<!--                    <li class="item4" id="log-out">-->
+<!--                        <a href="#" ><img src="../resources/img/teacherLogin/home/return.png" class="vip"> <span style="margin-left: 40px;">退出登录</span></a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+        </div>
+
+        <!-- 消息通知 -->
+        <div class="newsOpen">
+            <a href="#" >
+                <img src="../resources/img/teacherLogin/home/naozhong.png" id="naozhong" >
+            </a>
+            <!-- 消息通知弹出框 -->
+            <div id="news">
+                <span class="newsTitle">暂无新通知</span>
+                <div class="newsDown">
+                    <a href="#" class="newsLeft">全部标记已读</a>
+                    <a href="#" class="newsRight">查看全部</a>
+                </div>
+            </div>
+        </div>
+        <div class="tool1">
+            <a href="#">
+                <img src="../resources/img/teacherLogin/home/tool.png" class="tool_icon">
+            </a>
+        </div>
+    </div>
+    <!-- 中部 -->
+    <div class="content">
+        <!-- 标题 -->
+        <div class="contentTop">
+            <div class="contentblank"></div>
+            <div class="content-wen">
+                <div class="content-title">
+                    <span class="title-name" id="title-name">第一次作业</span>
+                </div>
+                <p class="content-introduce">
+                    <span id="content-introduce">
+                        针对小组所选题目，基于软件目标、功能模型、软件界面、人力分配、进度安排、资金预算等方面，
+                        编写简要的软件设计报告，向甲方提供一个简要的项目设计建议书。
+                    </span>
+                </p>
+                <p class="content-span">
+                    <span>截止日期: <i id="endDate"></i></span>
+                    <span>个人作业</span>
+                    <span>需要查重</span>
+                </p>
+                <p class="content-paper">
+                    <img src="../resources/img/studentLogin/icon/peper.png">查看谁交了
+                </p>
+            </div>
+        </div>
+        <div class="content-handup">
+            <div class="handup">
+                <div class="handup-but">
+                    <button id="handup-button" class="handup-button">提交</button>
+                    <button id="again-handup-button" class="again-handup-button">重新提交</button>
+                </div>
+                <div class="handup-wwc">
+                    <span class="finishTask">未完成</span>
+                    <span class="nofinishTask">暂未公布成绩</span>
+                </div>
+            </div>
+            <div class="up-after" id="up-after">
+                <span><p>已上传文件：</p><p class="file-name" id="file-name">文件名</p></span>
+            </div>
+            <div class="homework-box">
+                <input id="upfile" class="upfile" type="file" accept="*.rar, *.zip, *.gif, *.jpeg, *.png, *.jpg, *.bmp "/>
+<!--                <p id="fileup"></p>-->
+                <div class="hw" id="hw">
+                    <img src="../resources/img/studentLogin/icon/plussign.png">
+                    <div class="hw-txt">
+                        <p class="hw-add">添加作业文件</p>
+                        <br/>
+                        <i class="s2" id="taskContent">支持各类文档、图片、代码、压缩包格式</i>
+                    </div>
+<!--                    <div class="hw-tj">-->
+<!--                        <a><img src="../resources/img/studentLogin/icon/plussign.png"></a>-->
+<!--                    </div>-->
+<!--                    <div class="shangchuan">-->
+<!--                        <p class="hw-add">添加作业文件</p>-->
+<!--                        <input class="s2" type="text"  placeholder="支持各类文档、图片、代码、压缩包格式" id="taskContent">-->
+<!--                    </div>-->
+                </div>
+            </div>
+
+            <div class="work-message clear" id="mess1">
+                <span class="s1">作业留言：</span>
+                <span class="s2">点击添加留言（仅老师可看）...</span>
+            </div>
+        </div>
+        <div class="homework-log">
+            <a href="#" class="togglesee">查看日志></a>
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript" src="../resources/js/common/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../resources/js/common/jquery-ui.js"></script>
+<script type="text/javascript" src="../resources/js/common/common.js"></script>
+<script type="text/javascript" src="../resources/js/student/studentuphomework.js"></script>
+</body>
+</html>

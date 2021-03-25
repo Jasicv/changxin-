@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课堂-简单好用的互动课堂管理工具</title>
+    <link type="text/css" rel="stylesheet" href="../resources/css/teachercourse.css">
+</head>
+<body>
+<div class="bge">
+    <!--导航-->
+    <div class="div-nav-default">
+        <!--    左菜单-->
+        <ul class="ul-nav-menu-left" id="ul-nav-menu">
+            <li class="li-nav-item logo">
+                <img src="../resources/img/logo.jpg" width="96px" height="24px" id="left-menu-logo">
+            </li>
+            <li class="li-nav-item">
+                <a href="/teachercourse"  id="left-menu-ketang">课堂
+                    <img src="../resources/img/hot.jpg" style="width: 21px;height: 10px;vertical-align: top;">
+                </a>
+            </li>
+            <li class="li-nav-item">
+                <a href="/muke" id="left-menu-muke">精品慕课</a>
+            </li>
+            <li class="li-nav-item">
+                <a href="/myjingpin" id="left-menu-jingpin">我的精品</a>
+            </li>
+            <li class="li-nav-item">
+                <a href="/shuangxuanhui" id="left-menu-shuangxuanhui" class="active">双选会</a>
+            </li>
+            <li class="li-nav-item">
+                <a href="/papermanage" id="left-menu-paper">论文管理</a>
+            </li>
+        </ul>
+        <!--    右菜单-->
+        <ul class="ul-nav-menu-right">
+            <!--        工具-->
+            <li class="li-nav-item tool">
+                <a>
+                    <img src="../resources/img/tool.jpg" id="tool">
+                </a>
+                <ul id="ul-tool" class="ul-tool">
+                    <li><a href="#">论文查重</a></li>
+                    <li><a href="#">学术存证</a></li>
+                </ul>
+            </li>
+            <!--        通知-->
+            <li class="li-nav-item notice">
+                <a><img src="../resources/img/notice.jpg" id="notice"></a>
+                <div class="div-notice" style="display: none" id="divnotice">
+                    <p class="zw">暂无新通知</p>
+                    <div class="div-operation">
+                        <a id="ignore-all" class="div-operation-ignoreall">全部标记已读</a>
+                        <a id="check-all" class="div-operation-check">查看全部</a>
+                    </div>
+                </div>
+            </li>
+            <!--        用户信息-->
+            <li class="li-nav-item user">
+                <a class="user"><img src="../resources/img/user.jpg" id="info"></a>
+                <div class="ul-user-info" id="userinfo" style="display: none">
+                    <ul>
+                        <li id="user-setting"><a>个人设置</a></li>
+                        <li id="log-out"><a>退出账户</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="div-content">
+        <!--        置顶课程+课程操作-->
+        <div class="div-content-fix">
+            <p class="zhidingcourse" id="top-course">置顶课程</p>
+            <p class="qitacourse" id="unpin-course">其他课程</p>
+            <div class="div-content-release-activity" id="div-content-release-activity">+快速发布活动</div>
+            <div class="div-content-add-establish" id="div-content-add-establish">+加入/创建课程</div>
+            <ul class="div-content-add-establish-list" id="div-content-add-establish-list">
+                <li id="div-content-establish"><a href="javascript:;" id="addClass">创建课程</a></li>
+                <li id="div-content-add"><a href="javascript:;" id="joinClass">加入课程</a></li>
+            </ul>
+            <div class="div-content-operation">
+                <ul>
+                    <li><a id="courseSort">课程排序</a></li>
+                    <li><a id="courseClassify">归档管理</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--        所选课程-->
+        <div class="content-selectedCourse" id="content-selectedCourse">
+
+            <!--        上层    添加课程div块-->
+            <dl class="onLevel-otherCourse-create-course" id="onLevel-otherCourse-create-course">
+                <dt class="create-course-bg"></dt>
+                <dd id="onLevel-otherCourse-create-course-add">
+                    <i class="chuangjiankecheng-add"></i>
+                    <p>创建课程</p>
+                </dd>
+            </dl>
+        </div>
+        <!--        下层  其他课程-->
+        <div class="lowerLevel-other-course" id="lowerLevel-other-course">
+            <p class="p-other">其他课程</p>
+            <!--        其他课程-->
+            <div class="content-otherCourse" id="content-otherCourse">
+                <!--             下层    添加课程div块-->
+                <dl class="lowerLevel-otherCourse-create-course" id="lowerLevel-otherCourse-create-course">
+                    <dt class="lowerLevel-otherCourse-create-course-bg"></dt>
+                    <dd id="lowerLevel-otherCourse-create-course-add">
+                        <i class="chuangjiankecheng-add"></i>
+                        <p>创建课程</p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹窗背景-->
+<div class="bg" id="bg">
+    <!--加入课程弹窗-->
+    <div class="add-course-popup" id="add-course-popup">
+        <div class="add-course-popup-title">加入课程</div>
+        <div class="add-course-popup-inputBox">
+            <input class="add-course-popup-input" id="add-course-popup-input" type="text" placeholder="请输入加课码">
+        </div>
+        <div class="add-course-popup-but">
+            <button class="add-course-popup-but-sure" id="add-course-popup-but-sure">加入</button>
+            <button class="add-course-popup-but-cancel" id="add-course-popup-but-cancel">取消</button>
+        </div>
+    </div>
+    <!--    创建课程 弹窗-->
+    <div class="establish-course" id="establish-course">
+        <div class="establish-course-title">
+            <h3>新建课程<i class="close-establish-course" id="close-establish-course"></i></h3>
+        </div>
+        <div class="establish-course-name">
+            <span>课程名称：</span>
+            <input type="text" id="input-establish-course-name" placeholder="请输入课程名称">
+        </div>
+        <div class="establish-class-name">
+            <span>班级名称：</span>
+            <input type="text" id="input-establish-class-name" placeholder="请输入班级名称（选填）">
+        </div>
+        <div class="establish-course-choose-term">
+            <span>选择学期：</span>
+            <select class="establish-course-year-box" id="establish-course-year-box">
+                <option name="year" value="2010-2011">2010-2011</option>
+                <option name="year" value="2011-2012">2011-2012</option>
+                <option name="year" value="2012-2013">2012-2013</option>
+                <option name="year" value="2013-2014">2013-2014</option>
+                <option name="year" value="2014-2015">2014-2015</option>
+                <option name="year" value="2015-2016">2015-2016</option>
+                <option name="year" value="2016-2017">2016-2017</option>
+                <option name="year" value="2017-2018">2017-2018</option>
+                <option name="year" value="2018-2019">2018-2019</option>
+                <option name="year" value="2019-2020" selected="selected">2019-2020</option>
+                <option name="year" value="2020-2021">2020-2021</option>
+                <option name="year" value="2021-2022">2021-2022</option>
+                <option name="year" value="2022-2023">2022-2023</option>
+            </select>
+            <select class="establish-course-studyData-box" id="establish-course-studyData-box">
+                <option name="studyData" value="2018-2019">不限</option>
+                <option name="studyData" value="第一学期" selected="selected">第一学期</option>
+                <option name="studyData" value="第二学期">第二学期</option>
+            </select>
+        </div>
+        <div class="establish-course-extra-tips">学生必须额外填写下列信息才能加入课程</div>
+        <div class="establish-course-extra-infor-box">
+            <input type="checkbox" name="extra-infor">自然班级
+            <input type="checkbox" name="extra-infor">年级
+            <input type="checkbox" name="extra-infor">入学年月
+        </div>
+        <div class="establish-course-btns">
+            <button type="button" class="establish-course-cancel" id="establish-course-cancel">取消</button>
+            <button type="button" class="establish-course-sure" id="establish-course-sure">创建</button>
+        </div>
+    </div>
+    <!--    编辑课程 弹窗-->
+    <div class="edit-course" id="edit-course">
+        <div class="edit-course-title">
+            <h3>编辑课程<i class="close-establish-course" id="close-edit-course"></i></h3>
+        </div>
+        <div class="edit-course-name">
+            <span>课程名称：</span>
+            <input type="text" id="input-edit-course-name" placeholder="请输入课程名称">
+        </div>
+        <div class="edit-class-name">
+            <span>班级名称：</span>
+            <input type="text" id="input-edit-class-name" placeholder="请输入班级名称（选填）">
+        </div>
+        <div class="edit-course-choose-term">
+            <span>选择学期：</span>
+            <select class="edit-course-year-box" id="edit-course-year-box">
+                <option name="year" value="请选择学年" selected="selected">请选择学年</option>
+                <option name="year" value="2010-2011">2010-2011</option>
+                <option name="year" value="2011-2012">2011-2012</option>
+                <option name="year" value="2012-2013">2012-2013</option>
+                <option name="year" value="2013-2014">2013-2014</option>
+                <option name="year" value="2014-2015">2014-2015</option>
+                <option name="year" value="2015-2016">2015-2016</option>
+                <option name="year" value="2016-2017">2016-2017</option>
+                <option name="year" value="2017-2018">2017-2018</option>
+                <option name="year" value="2018-2019">2018-2019</option>
+                <option name="year" value="2019-2020">2019-2020</option>
+                <option name="year" value="2020-2021">2020-2021</option>
+                <option name="year" value="2021-2022">2021-2022</option>
+                <option name="year" value="2022-2023">2022-2023</option>
+            </select>
+            <select class="edit-course-studyData-box" id="edit-course-studyData-box">
+                <option name="studyData" value="不限" selected="selected">不限</option>
+                <option name="studyData" value="第一学期">第一学期</option>
+                <option name="studyData" value="第二学期">第二学期</option>
+            </select>
+        </div>
+        <div class="edit-course-extra-tips">学生必须额外填写下列信息才能加入课程</div>
+        <div class="edit-course-extra-infor-box">
+            <input type="checkbox" name="edit-extra-infor">自然班级
+            <input type="checkbox" name="edit-extra-infor">年级
+            <input type="checkbox" name="edit-extra-infor">入学年月
+        </div>
+        <div class="edit-course-btns">
+            <button type="button" class="edit-course-cancel" id="edit-course-cancel">取消</button>
+            <button type="button" class="edit-course-sure" id="edit-course-sure" title="" >修改</button>
+        </div>
+    </div>
+    <!--    退课确认框-->
+    <div class="drop-out-sure" id="drop-out-sure">
+        <div class="drop-out-head">
+            <span>确定退课?</span>
+        </div>
+        <div class="drop-out-body">
+            <p>您的这个课程的任何信息或评论将被永久删除<br>
+                <span style="color:red">警告：此操作无法撤消</span>
+            </p>
+            <p><span title="如果您不是VIP，删除课程，也会被计算在免费的课程数里" style="color:blue">提醒：已用课程数包含了“删除课程数”</span></p>
+        </div>
+        <div class="drop-out-but">
+            <ul>
+                <li class="drop-out-but-cancel" id="drop-out-but-cancel"><a class="btn btn-default" href="javascript:void(0);">取消</a></li>
+                <li class="drop-out-but-sure" id="drop-out-but-sure"><a class="btn disable" href="javascript:void(0);">删除</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--    课程排序  归档-->
+    <div class="sort-file" id="sort-file">
+        <div class="sort-file-title">
+            <ul>
+                <li class="sort-file-title-sort" id="sort-file-title-sort">课程排序</li>
+                <li class="sort-file-title-file" id="sort-file-title-file">归档管理</li>
+            </ul>
+            <span class="sort-file-title-X" id="sort-file-title-X"></span>
+        </div>
+        <!--        课程排序-->
+        <div class="sort-main" id="sort-main">
+            <ul class="sort-main-sort">
+<!--                <li>-->
+<!--                    <i></i>-->
+<!--                    <span>熟悉  课堂派</span>-->
+<!--                </li>-->
+            </ul>
+            <div class="sort-main-bar" id="sort-main-bar">
+                <div class="sort-main-scroll" id="sort-main-scroll"></div>
+            </div>
+        </div>
+        <!--        课程归档-->
+        <div class="file-main" id="file-main">
+            <div class="file-main-file" id="file-main-file">
+            </div>
+            <div class="file-main-bar" id="file-main-bar">
+                <div class="file-main-scroll" id="file-main-scroll"></div>
+            </div>
+        </div>
+    </div>
+    <!--    发布活动-->
+    <div class="release-activity" id="release-activity">
+        <div class="release-activity-main">
+            <i class="close-release-activity" id="close-release-activity"></i>
+            <div class="release-activity-main-title">
+                <p>选择要发布的类型</p>
+            </div>
+            <div class="release-activity-content">
+                <ul>
+                    <li class="release-activity-content-notice">
+                        <div class="release-activity-content-notice-img"></div>
+                        <span>公告</span>
+                    </li>
+                    <li class="release-activity-content-topic">
+                        <div class="release-activity-content-topic-img"></div>
+                        <span>话题</span>
+                    </li>
+                    <li class="release-activity-content-interaction">
+                        <div class="release-activity-content-interaction-img"></div>
+                        <span>课堂互动</span>
+                    </li>
+                    <li class="release-activity-content-work" id="release-activity-content-work">
+                        <div class="release-activity-content-work-img"></div>
+                        <span>作业</span>
+                    </li>
+                    <li class="release-activity-content-text">
+                        <div class="release-activity-content-text-img"></div>
+                        <span>测试</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--    发布活动--作业   -->
+    <div class="release-personal-work" id="release-personal-work">
+        <i class="close-release-personal-work" id="close-release-personal-work"></i>
+        <div class="release-personal-work-title">
+            <div>
+                <i></i>
+                <p>发布个人作业</p>
+            </div>
+        </div>
+        <div class="release-personal-work-main">
+            <div class="work-main-input-box">
+                <input type="text" placeholder="作业名称" class="input-box-work-name" id="input-box-work-name" value="">
+                <div class="input-box-work-cont">
+                    <textarea class="work-editor-txt" id="work-editor-txt" contenteditable="true" placeholder="作业简介，作业格式等要求,温馨提醒：word,pdf,txt等文字性的文档，都可以进行查重"></textarea>
+                </div>
+                <div class="input-box-end-data">
+                    <span>截止日期:</span>&nbsp;&nbsp;&nbsp;
+                    <input class="input-box-end-data-txt" id="input-box-end-data-txt" placeholder="请输入日期" type="text">
+                </div>
+                <div class="input-box-height-score">
+                    <span>满&nbsp;分&nbsp;值&nbsp;:</span>&nbsp;&nbsp;&nbsp;
+                    <input class="release-homework-height-score" id="release-homework-height-score" placeholder="请填写数值">
+                </div>
+                <div class="input-box-checkbox">
+                    <span>是否查重:</span>
+                    <!-- 开关按钮 -->
+                    <div class="switch-btn" id="kaiguan">
+                        <input type="checkbox" class="hidden-checkbox" name="" value="">
+                        <span class="switch-area"></span>
+                        <span class="switch-toggle"></span>
+                    </div>
+                </div>
+                <!-- 查重收缩框 -->
+                <div class="chachong" id="chachong">
+                    <span>查重警戒值：</span>
+                    <input class="release-homework-check-warm" id="release-homework-check-warm" >%
+                    <br><br>
+                    <span>查重率高于</span>
+                    <input class="release-homework-check-highest" id="release-homework-check-highest" >%自动打回
+                </div>
+            </div>
+            <div class="work-main-import">
+                <div class="work-main-import-img"></div>
+            </div>
+            <div class="work-main-release">
+                <p class="work-main-release-title">发布课程对象</p>
+                <!--                多选-->
+                <!--                <div class="release-box">-->
+                <!--                    <p>请选择要发布到的课程</p>-->
+                <!--                    <div class="course-hide" id="course-hide">-->
+                <!--&lt;!&ndash;                        <li>数据库基础<i></i></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;                        <li>软件工程<i></i></li>&ndash;&gt;-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--                <div class="chose-hide" id="chose-hide">-->
+                <!--                    <ul class="chose-hide-main" id="chose-hide-main">-->
+                <!--&lt;!&ndash;                        <li class="">数据库基础<i></i></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;                        <li class="">软件工程<i></i></li>&ndash;&gt;-->
+                <!--                    </ul>-->
+                <!--                    <div class="chose-hide-bar" id="chose-hide-bar">-->
+                <!--                        <div class="chose-hide-scroll" id="chose-hide-scroll"></div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <select class="work-main-release-chose" id="work-main-release-chose" title="请选择课程">
+                    <option value="0">请选择课程</option>
+                </select>
+            </div>
+        </div>
+        <div class="release-personal-work-footer">
+            <button class="release-personal-cancel" id="release-personal-cancel">取消</button>
+            <button class="release-personal-sure"  id="release-personal-sure">确定</button>
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript"  src="../resources/js/common/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../resources/js/common/common.js"></script>
+<script type="text/javascript" src="../resources/js/teacher/courselist.js"></script>
+<script type="text/javascript" src="../resources/js/teacher/teachercourse.js"></script>
+<script type="text/javascript" src="../resources/js/teacher/teachercourseoperation.js"></script>
+
+</body>
+</html>

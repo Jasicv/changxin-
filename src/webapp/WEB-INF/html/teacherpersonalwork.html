@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生个人作业-简单好用的互动课堂管理工具</title>
+    <link type="text/css" rel="stylesheet" href="../resources/css/teacherpersonalwork.css">
+</head>
+<body>
+<!--导航-->
+<div class="div-nav-default">
+    <!--左侧返回-->
+    <a class="left-return">
+        <img src="../resources/img/assets/returnReg.png" class="returnLogo" onclick="">
+        <span class="courseName" id="courseName">课程</span>
+    </a>
+    <!--    成员-->
+    <div class="nav-middle">
+        <a href="#" class="choose">学生作业</a>
+        <a href="3">作业讨论</a>
+    </div>
+    <!--    右菜单-->
+    <ul class="ul-nav-menu-right">
+        <!--        工具-->
+        <li class="li-nav-item tool">
+            <a>
+                <img src="../resources/img/tool.jpg" id="tool"></a>
+
+            <ul style="display: none;background-color: #ffffff" id="ul-tool" class="ul-tool">
+                <li><a href="#">论文查重</a></li>
+                <li><a href="#">学术存证</a></li>
+            </ul>
+        </li>
+        <!--        通知-->
+        <li class="li-nav-item notice">
+            <a><img src="../resources/img/notice.jpg" id="notice"></a>
+            <div class="div-notice" style="display: none;" id="divnotice">
+                <p class="zw">暂无新通知</p>
+                <div class="div-operation">
+                    <a id="ignore-all" class="div-operation-ignoreall">全部标记已读</a>
+                    <a id="check-all" class="div-operation-check">查看全部</a>
+                </div>
+            </div>
+        </li>
+        <!--        用户信息-->
+        <li class="li-nav-item user">
+            <a class="user"><img src="../resources/img/user.jpg" id="info"></a>
+            <div class="ul-user-info" id="userinfo" style="display: none;">
+                <ul>
+                    <li id="user-setting"><a>个人设置</a></li>
+                    <li id="log-out"><a>退出账户</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+<!--作业批改框架-->
+<div class="wrap">
+    <div class="header">
+        <div class="header-title">
+            <h2 id="homeworkName">第一次作业</h2>
+            <div class="finalScores" id="finalScores">生成期末考成绩</div>
+        </div>
+        <div class="operation">
+            <p>截止 2020年5月21 23：59</p>
+            <div class="search">
+                <input id="texSearch" type="text" placeholder=" 输入学号、姓名">
+            </div>
+            <div class="showScores">
+                <span id="showScores">对学生显示成绩</span>
+                <div class="showBox" id="showBox" style="display: none">
+                    <a id="visible">对学生显示成绩</a>
+                    <a id="invisible">对学生隐藏成绩</a>
+                </div>
+            </div>
+            <div class="copy">查重设置</div>
+        </div>
+    </div>
+    <!--批改作业-->
+    <div class="correction">
+        <div class="top">
+            <a class="fold" id="fold">收起</a>
+            <p class="correction-tipInfo">已筛选出
+                <span>0</span>人（全班0人）</p>
+        </div>
+        <div class="correction-tip">
+            <dl class="tip" id="tip">
+                <dt>成绩：</dt>
+                <li class="tipunlimited" id="tipunlimited">不限</li>
+                <dd id="done">已批（0）</dd>
+                <dd id="notDone">未批（0）</dd>
+                <dd id="unSubmit">未交（0）</dd>
+            </dl>
+            <dl class="tip" id="similar">
+                <dt>相似度：</dt>
+                <li class="unlimited" id="similarunlimited">不限</li>
+                <dd>0-50%</dd>
+                <dd>50%-70%</dd>
+                <dd>70%-90%</dd>
+                <dd>90%-100%</dd>
+            </dl>
+            <dl class="tip" id="circumstance">
+                <dt>提交状态：</dt>
+                <li class="unlimited" id="circumstanceunlimited">不限</li>
+                <dd>按时交</dd>
+                <dd>超时交</dd>
+            </dl>
+            <dl class="tip" id="share">
+                <dt>分享状态：</dt>
+                <li class="unlimited" id="shareunlimited">不限</li>
+                <dd>未分享</dd>
+                <dd>已分享</dd>
+            </dl>
+            <div class="corr-hide">
+                <dl class="tip-hide" id="tip-hide">
+                    <dt>作业字数：</dt>
+                    <div class="div-dd">
+                        <input type="text" class="input start" id="workstart">
+                        <span>-</span>
+                        <input type="text" class="input end" id="workend">
+                        <a>确定</a>
+                    </div>
+                </dl>
+                <dl class="tip-hide corrCount" id="corrCount">
+                    <dt>批改次数：</dt>
+                    <div class="div-dd">
+                        <input type="text" class="input start" id="countstart">
+                        <span>-</span>
+                        <input type="text" class="input end" id="countend">
+                        <a>确定</a>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <!--分类排序-->
+    <div class="category">
+        <ul class="category-ul">
+            <li class="select"><a id="selectByNum">学号</a></li>
+            <li><a id="selectByName">姓名</a></li>
+            <li><a id="selectByScores">成绩</a></li>
+            <li><a id="selectBySimilar">相似度</a></li>
+            <li><a id="selectByCondition">提交状态</a></li>
+            <li><a id="selectByWork">作业字数</a></li>
+            <li><a id="selectByCorr">批改次数</a></li>
+        </ul>
+    </div>
+    <!--    批改作业信息-->
+    <div class="corList">
+        <div class="corListTable">
+            <div class="corListTable-top">
+                <ul class="top-ul">
+                    <li class="Fli">
+                        <input type="checkbox" class="checkBox" id="checkAll">
+                    </li>
+                    <li class="Sli">已选<span>0</span>/0</li>
+                </ul>
+                <div class="corOperation">
+                    <!--                    打回作业弹出框-->
+                    <div class="out" id="out" style="display: none">
+                        <div class="Rtop">确定要打回学生选中的作业？</div>
+                        <div class="Rmiddle">
+                            <div class="middleContent">
+                                <span class="Rtitle">该学生需要重新提交作业已便批阅成绩</span>
+                                <input type="text" placeholder="打回理由（选填）..." class="Rreaosn">
+                                <div class="Rbtn">
+                                    <a id="cancel">取消</a>
+                                    <a id="insure" class="active">确定</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn1 disable" id="giveScores">批量给分</button>
+                    <!--                    批量给分框-->
+                    <div class="div-giveScores" id="div-giveScores" style="display: none">
+                        <a id="togetherGiveScores">统一给分</a>
+                        <a id="ranGiveScores">区间给分</a>
+                    </div>
+                    <button class="btn1 disable" id="returnWork">打回作业</button>
+
+                    <button class="btn1 disable" id="download">下载</button>
+                    <!--                    下载框-->
+                    <div class="div-giveScores div-download" id="div-download" style="display: none">
+                        <a>下载作业文档</a>
+                        <a>下载选中的报表</a>
+                        <a>下载全班的报表</a>
+                    </div>
+                </div>
+                <div class="copy" id="checkCopy">
+                    <p>查重率超过50%自动标红</p>
+                </div>
+            </div>
+        </div>
+        <div class="approved" id="approved">
+<!--            <dl class="homeworkmanage">-->
+<!--                <dd class="sequence">-->
+<!--                    <input class="radio" type="checkbox">-->
+<!--                </dd>-->
+<!--                <dd class="left">-->
+<!--                    <span class="stu-num text-overflow">1001210647</span>-->
+<!--                </dd>-->
+<!--                <dd class="usernamegai">-->
+<!--                    <strong class="stu-name text-overflow" title="惠更斯">惠更斯</strong>-->
+<!--                </dd>-->
+<!--                <dd class="colaa-batscore-fraction">-->
+<!--                    <input type="text" id="changgrades" value="20" onchange="changeGrades()">/100-->
+<!--                </dd>-->
+<!--                <dd class="colaa-similarity "><span>8.88%</span></dd>-->
+<!--                <dd class="colaa-ontime">20/04/26 21:21</dd>-->
+<!--                <dd class="colaa-homeworkNumber" data-val="&#45;&#45;">-->
+<!--                    <span title="该格式无法提取文字">&#45;&#45;</span>-->
+<!--                </dd>-->
+<!--                <dd class="colaa-cishu-help-info-tips">批阅<i>1</i>次</dd>-->
+<!--                <dd class="colaa-piyue">-->
+<!--                    <a href="#" target="_blank">进入批阅</a>-->
+<!--                </dd>-->
+<!--                <div class="fn-show">-->
+<!--                </div>-->
+<!--            </dl>-->
+<!--&lt;!&ndash;            未交&ndash;&gt;-->
+<!--            <dl class="homeworkmanage">-->
+<!--                <dd class="sequence">-->
+<!--                </dd>-->
+<!--                <dd class="left">-->
+<!--                    <span class="stu-num text-overflow">1001210647</span>-->
+<!--                </dd>-->
+<!--                <dd class="usernamegai">-->
+<!--                    <strong class="stu-name text-overflow" title="惠更斯">惠更斯</strong>-->
+<!--                </dd>-->
+<!--                <dd class="colaa-batscore-fraction">-->
+<!--                    <p class="un-colaa-batscore-fraction">未交</p>-->
+<!--                </dd>-->
+<!--                <dd class="colaa-similarity "><span>&#45;&#45;</span></dd>-->
+<!--                <dd class="colaa-ontime">&#45;&#45;</dd>-->
+<!--                <dd class="colaa-homeworkNumber">-->
+<!--                    <span title="该格式无法提取文字">&#45;&#45;</span>-->
+<!--                </dd>-->
+<!--                <dd class="colaa-cishu-help-info-tips">&#45;&#45;</dd>-->
+<!--                <dd class="colaa-piyue-time">-->
+<!--                    <a href="javascript:;" id="colaa-times" onclick="colaaTimes()">已催<i id="colaa-piyue-times">0</i>次</a>-->
+<!--                </dd>-->
+<!--                <div class="fn-show">-->
+<!--                </div>-->
+<!--            </dl>-->
+
+        </div>
+        <div class="done-div" id="done-div"></div>
+        <div class="notDone-div" id="notDone-div"></div>
+        <div class="unSubmit-div" id="unSubmit-div"></div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript" src="../resources/js/common/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../resources/js/common/jquery-ui.js"></script>
+<script type="text/javascript" src="../resources/js/common/common.js"></script>
+<script type="text/javascript" src="../resources/js/teacher/teacherpersonalwork.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课堂-简单好用的互动课堂管理工具</title>
+    <link type="text/css" rel="stylesheet" href="../resources/css/course.css">
+</head>
+<body>
+<div class="bge">
+    <!--导航-->
+    <div class="div-nav-default">
+        <!--    左菜单-->
+        <ul class="ul-nav-menu-left" id="ul-nav-menu">
+            <li class="li-nav-item logo">
+                <img src="../resources/img/logo.jpg" width="96px" height="24px" id="left-menu-logo">
+            </li>
+            <li class="li-nav-item">
+                <a href="/teachercourse"  id="left-menu-ketang">课堂
+                    <img src="../resources/img/hot.jpg" style="width: 21px;height: 10px;vertical-align: top;">
+                </a>
+            </li>
+            <li class="li-nav-item">
+                <a href="#" id="left-menu-muke">精品慕课</a>
+            </li>
+            <li class="li-nav-item">
+                <a href="#" id="left-menu-jingpin">我的精品</a>
+            </li>
+            <li class="li-nav-item">
+                <a href="#" id="left-menu-shuangxuanhui">双选会</a>
+            </li>
+            <li class="li-nav-item">
+                <a href="#" id="left-menu-paper">论文管理</a>
+            </li>
+        </ul>
+        <!--    右菜单-->
+        <ul class="ul-nav-menu-right">
+            <!--        工具-->
+            <li class="li-nav-item tool">
+                <a>
+                    <img src="../resources/img/tool.jpg" id="tool">
+                </a>
+                <ul id="ul-tool" class="ul-tool">
+                    <li><a href="#">论文查重</a></li>
+                    <li><a href="#">学术存证</a></li>
+                </ul>
+            </li>
+            <!--        通知-->
+            <li class="li-nav-item notice">
+                <a><img src="../resources/img/notice.jpg" id="notice"></a>
+                <div class="div-notice" style="display: none" id="divnotice">
+                    <p class="zw">暂无新通知</p>
+                    <div class="div-operation">
+                        <a id="ignore-all" class="div-operation-ignoreall">全部标记已读</a>
+                        <a id="check-all" class="div-operation-check">查看全部</a>
+                    </div>
+                </div>
+            </li>
+            <!--        用户信息-->
+            <li class="li-nav-item user">
+                <a class="user"><img src="../resources/img/user.jpg" id="info"></a>
+                <div class="ul-user-info" id="userinfo" style="display: none">
+                    <ul>
+                        <li id="user-setting"><a>个人设置</a></li>
+                        <li id="log-out"><a>退出账户</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="div-content">
+        <!--        置顶课程+课程操作-->
+        <div class="div-content-fix">
+            <p class="zhidingcourse" id="top-course">置顶课程</p>
+            <p class="qitacourse" id="unpin-course">其他课程</p>
+            <div class="div-content-add" id="addCourse">+加入课程</div>
+            <div class="div-content-operation">
+                <ul>
+                    <li><a id="courseSort">课程排序</a></li>
+                    <li><a id="courseClassify">归档管理</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--        所选课程-->
+        <div class="content-selectedCourse" id="content-selectedCourse">
+<!--            <dl class="course">-->
+<!--                <dt class="course-title">-->
+<!--                    <div class="course-title-lable">-->
+<!--                        <p class="course-title-lable-identity" id="course-title-lable-identity">学</p>-->
+<!--                    </div>-->
+<!--                    <div class="course-name">-->
+<!--                        <a href="#" title="软件工程" class="courseName" id="courseName">软件工程</a>-->
+<!--                        <span title="91713801,917213802" class="courseRemarks" id="courseRemarks">91713801,917213802</span>-->
+<!--                    </div>-->
+<!--                    <div class="add-course-no">-->
+<!--                        <i class="add-course-QR"></i>-->
+<!--                        <p class="add-course-tit" id="add-course-tit">加课码：-->
+<!--                            <i class="add-course-num" id="add-course-num">39EM26</i>-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                    <span class="course-term">-->
+<!--						<p class="course-term-year" id="course-term-year">2016-2017</p>-->
+<!--						<p class="course-term-term" id="course-term-term">第一学期</p>-->
+<!--					</span>-->
+<!--                </dt>-->
+<!--                <dd class="course-main">-->
+<!--                    <ul class="job-list">-->
+<!--                        <li class="recent-word">近期作业</li>-->
+<!--                        &lt;!&ndash;                        无  a标签不可点击事件&ndash;&gt;-->
+<!--                        <li class="work-list-first"><a class="work-a-first" id="work-a-first" href="#">无</a></li>-->
+<!--                        <li class="work-list-second"><a class="work-a-second" id="work-a-second" href="#"></a></li>-->
+<!--                    </ul>-->
+<!--                    <div class="course-main-foot">-->
+<!--                        <img class="course-teatherAvatar">-->
+<!--                        <p class="course-main-foot-teacherNmae" id="course-main-foot-teacherNmae">王秋华</p>-->
+<!--                        <div class="more" id="more">-->
+<!--                            <p class="more-text">更多</p>-->
+<!--                            <img class="more-img">-->
+<!--                        </div>-->
+<!--                        <ul class="more-bg" id="more-bg">-->
+<!--                            <li class="more-drop-out"><a class="more-drop-out-a" href="javascript:;">退课</a></li>-->
+<!--                            <li class="more-archive"><a class="more-archive-a" href="javascript:;">归档</a></li>-->
+<!--                        </ul>-->
+<!--                        <a class="top" id="top">置顶</a>-->
+<!--                        <a class="unpin" id="unpin">取消置顶</a>-->
+<!--                    </div>-->
+<!--                </dd>-->
+<!--            </dl>-->
+
+            <!--        上层    添加课程div块-->
+            <dl class="onLevel-otherCourse-create-course" id="onLevel-otherCourse-create-course">
+                <dt class="create-course-bg"></dt>
+                <dd id="onLevel-otherCourse-create-course-add">
+                    <i class="chuangjiankecheng-add"></i>
+                    <p>加入课程</p>
+                </dd>
+            </dl>
+        </div>
+        <!--        下层  其他课程-->
+        <div class="lowerLevel-other-course" id="lowerLevel-other-course">
+            <p class="p-other">其他课程</p>
+            <!--        其他课程-->
+            <div class="content-otherCourse" id="content-otherCourse">
+                <!--             下层    添加课程div块-->
+                <dl class="lowerLevel-otherCourse-create-course" id="lowerLevel-otherCourse-create-course">
+                    <dt class="lowerLevel-otherCourse-create-course-bg"></dt>
+                    <dd id="lowerLevel-otherCourse-create-course-add">
+                        <i class="chuangjiankecheng-add"></i>
+                        <p>加入课程</p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹窗背景-->
+<div class="bg" id="bg">
+    <!--加入课程弹窗-->
+    <div class="add-course-popup" id="add-course-popup">
+        <div class="add-course-popup-title">加入课程</div>
+        <div class="add-course-popup-inputBox">
+            <input class="add-course-popup-input" id="add-course-popup-input" type="text" placeholder="请输入加课码">
+        </div>
+        <div class="add-course-popup-but">
+            <button class="add-course-popup-but-sure" id="add-course-popup-but-sure">加入</button>
+            <button class="add-course-popup-but-cancel" id="add-course-popup-but-cancel">取消</button>
+        </div>
+    </div>
+    <!--    课程排序  归档-->
+    <div class="sort-file" id="sort-file">
+        <div class="sort-file-title">
+            <ul>
+                <li class="sort-file-title-sort" id="sort-file-title-sort">课程排序</li>
+                <li class="sort-file-title-file" id="sort-file-title-file">归档管理</li>
+            </ul>
+            <span class="sort-file-title-X" id="sort-file-title-X"></span>
+        </div>
+        <!--        课程排序-->
+        <div class="sort-main" id="sort-main">
+            <ul class="sort-main-sort" id="sort-main-sort">
+<!--                <li>-->
+<!--                    <i></i>-->
+<!--                    <span>熟悉  课堂派</span>-->
+<!--                </li>-->
+            </ul>
+            <div class="sort-main-bar" id="sort-main-bar">
+                <div class="sort-main-scroll" id="sort-main-scroll"></div>
+            </div>
+        </div>
+        <!--        课程归档-->
+        <div class="file-main" id="file-main">
+            <div class="file-main-file" id="file-main-file">
+<!--                <dl>-->
+<!--                    <dt>-->
+<!--                        <p class="file-title">课堂</p>-->
+<!--                        <p class="file-role">角色：老师</p>-->
+<!--                        <a class="file-more" id="file-more" onclick="fileMore(' + value.courseId +')"></a>-->
+<!--                        <ul class="file-more-box" id="file-more-box' + value.courseId + '">-->
+<!--                            <li class="file-more-box-recovery" onclick="fileMoreBoxRecovery(' + value.courseId +')"><a href="javascript:;">恢复</a></li>-->
+<!--                            <li class="file-more-box-del" onclick="fileMoreBoxDel(' + value.courseId +')"><a href="javascript:;">退课</a></li>-->
+<!--                        </ul>-->
+<!--                    </dt>-->
+<!--                </dl>-->
+            </div>
+            <div class="file-main-bar" id="file-main-bar">
+                <div class="file-main-scroll" id="file-main-scroll"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript"  src="../resources/js/common/jquery-1.11.3.min.js"></script>
+<script type="text/javascript"  src="../resources/js/common/jquery-ui.js"></script>
+<script type="text/javascript" src="../resources/js/common/common.js"></script>
+<script type="text/javascript" src="../resources/js/student/courselist.js"></script>
+<script type="text/javascript" src="../resources/js/student/studentcourse.js"></script>
+<script type="text/javascript" src="../resources/js/student/studentcourseoperation.js"></script>
+</body>
+
+</html>

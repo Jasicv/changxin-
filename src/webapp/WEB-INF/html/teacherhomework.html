@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../resources/css/teacherhomework.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../resources/calendar/basic/base.css"/>
+    <link rel="stylesheet" href="../resources/calendar/dist/css/calendar.min.css"/>
+</head>
+<body>
+<!--包含整个网页内容的大盒子-->
+<div class="main">
+    <!--导航-->
+    <div class="div-nav-default">
+        <!--左菜单-->
+        <ul class="ul-nav-menu-left">
+            <li class="li-nav-item leftButton" id="li-nav-item">
+                <img src="../resources/img/leftButton.jpg" id="leftButton">
+            </li>
+            <li class="li-nav-item courseInfo" id="courseInfo">
+                <p>
+                    <a href="/teachercourse">课堂</a>
+                    <span><p id="courseName"></p></span>
+                </p>
+            </li>
+        </ul>
+        <!--    右菜单-->
+        <ul class="ul-nav-menu-right">
+            <!--        工具-->
+            <li class="li-nav-item tool">
+                <a>
+                    <img src="../resources/img/tool.jpg" id="tool"></a>
+
+                <ul style="display: none" id="ul-tool">
+                    <li><a href="#">论文查重</a></li>
+                    <li><a href="#">学术存证</a></li>
+                </ul>
+            </li>
+            <!--        通知-->
+            <li class="li-nav-item notice">
+                <a><img src="../resources/img/notice.jpg" id="notice"></a>
+                <div class="div-notice" style="display: none" id="divnotice">
+                    <p class="zw">暂无新通知</p>
+                    <div class="div-operation">
+                        <a id="ignore-all" class="div-operation-ignoreall">全部标记已读</a>
+                        <a id="check-all" class="div-operation-check">查看全部</a>
+                    </div>
+                </div>
+            </li>
+            <!--        用户信息-->
+            <li class="li-nav-item user">
+                <a class="user"><img src="../resources/img/user.jpg" id="info"></a>
+                <div class="ul-user-info" id="userinfo" style="display: none">
+                    <ul>
+                        <li id="user-setting"><a>个人设置</a></li>
+                        <li id="log-out"><a>退出账户</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+        <!-- 消息通知 -->
+        <div class="newsOpen">
+            <a href="#">
+                <img src="../resources/img/naozhong.png" id="naozhong">
+            </a>
+            <!-- 消息通知弹出框 -->
+            <div id="news">
+                <span class="newsTitle">暂无新通知</span>
+                <div class="newsDown">
+                    <a href="#" class="newsLeft">全部标记已读</a>
+                    <a href="#" class="newsRight">查看全部</a>
+                </div>
+            </div>
+        </div>
+        <div class="tool1">
+            <a href="#">
+                <img src="../resources/img/tool.png" class="tool_icon">
+            </a>
+        </div>
+    </div>
+
+    <!-- 中部 -->
+    <!-- 头部图片 -->
+    <div class="content">
+        <div class="course">
+            <div class="coursrHeader">
+                <img src="../resources/img/coursePage/03 (1).png" class="image1">
+                <div class="title">
+                    <span class="span2" id="teacher-courseName">熟悉 课堂派</span>
+                    <a href="#">
+                        <img src="../resources/img/coursePage/edit-course.png" class="edit-course">
+                    </a>
+                </div>
+                <!-- 图片上的文字 -->
+                <div class="title1">
+                    <div class="extraCode">
+                        <img src="../resources/img/erweima.png" class="erweima">
+                        <a href="#"> 加课二维码 &nbsp;</a>
+                    </div>
+                    <div class="extraCode">
+
+                        <a href="#" class="extraCode-courseId"> 加课码： <i id="teacher-courseId">SJFNVM</i>&nbsp;
+                            &nbsp;</a>
+                    </div>
+                    <div class="extraCode">
+
+                        <a href="#"><img src="../resources/img/coursePage/ren.png" class="erweima"> 成员<i
+                                id="teacher-member">22</i> &nbsp;</a>
+                    </div>
+                    <div class="extraCode">
+                        <a href="#"> <img src="../resources/img/coursePage/fenxi.png" class="erweima">数据分析 &nbsp;</a>
+                    </div>
+                    <div class="extraCode">
+                        <a href="#"> <img src="../resources/img/coursePage/A+icon.png" class="erweima"> 成绩 &nbsp;</a>
+                    </div>
+                </div>
+                <div class="clothes">
+                    <a href="#"> <img src="../resources/img/coursePage/clothes.png"></a>
+                </div>
+                <div class="number">
+                    <span class="span4"><i id="hy-dong-ge-shu">0</i></span>
+                    <span class="span5"><i id="fa-bu-zuo-ye">1</i></span>
+                    <span class="span5"><i id="fa-bu-ce-shi">0</i></span>
+                </div>
+                <div class="numbertitle">
+                    <span class="span6">互动个数</span>
+                    <span class="span7">发布作业</span>
+                    <span class="span7">发布测试</span>
+                </div>
+                <ul>
+                    <li class="activeOther">
+                        <a href="#">课堂互动</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">作业</a>
+                    </li>
+                    <li class="activeOther">
+                        <a href="#">话题</a>
+                    </li>
+                    <li class="activeOther">
+                        <a href="#">资料</a>
+                    </li>
+                    <li class="activeOther">
+                        <a href="#">测试</a>
+                    </li>
+                    <li class="activeOther">
+                        <a href="#">公告</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 发布作业按钮 -->
+            <div class="coursrMain">
+                <button class="button" id="fabu">
+                    发布个人作业
+                </button>
+                &nbsp;&nbsp;
+                <button class="button">
+                    发布小组作业
+                </button>
+                <img src="../resources/img/coursePage/xiazai1.png" class="xiazai1">
+            </div>
+        </div>
+        <!-- 发布作业页面 -->
+        <div class="releaseWork">
+            <div id="homeWork">
+                <input class="textBox2" id="release-homework-title" placeholder="作业名称" type="text">
+                <input class="textBox3" id="release-homework-content"
+                       placeholder="作业简介，作业格式等要求,温馨提醒：word,pdf,txt等文字性的文档，都可以进行查重" type="text">
+                <div class="data">
+                    <span>截止日期:</span>&nbsp;&nbsp;&nbsp;
+                    <input class="textBox4" id="release-homework-data" placeholder="请输入日期 YYYY-MM-DD" type="text">
+                    <!--日历-->
+                    <div id="xv_Dates_box" class="dates_box">
+                        <div class="dates_box_top">
+                            <div class="dates_yy dates_choose"><span class="prev_choose choose_btn" id="xv_Yy_prev"><i
+                                    class="sign"></i></span><span class="ipt_wrap" id="xv_Year_wrap"><input
+                                    class="dlt_status"
+                                    style="width:32px;margin-left:4px;"
+                                    id="xv_Ipt_year"
+                                    type="text"><small>年</small><i
+                                    class="sign"></i></span><span class="next_choose choose_btn" id="xv_Yy_next"><i
+                                    class="sign"></i></span>
+                                <div class="dates_yy_list" id="xv_Dates_yy_list" style="display:none"><span
+                                        datevalue="1970"
+                                        class="">1970</span><span
+                                        datevalue="1971" class="">1971</span><span datevalue="1972" class="">1972</span><span
+                                        datevalue="1973" class="">1973</span><span datevalue="1974" class="">1974</span><span
+                                        datevalue="1975" class="">1975</span><span datevalue="1976" class="">1976</span><span
+                                        datevalue="1977" class="">1977</span><span datevalue="1978" class="">1978</span><span
+                                        datevalue="1979" class="">1979</span><span datevalue="1980" class="">1980</span><span
+                                        datevalue="1981" class="">1981</span><span datevalue="1982" class="">1982</span><span
+                                        datevalue="1983" class="">1983</span><span datevalue="1984" class="">1984</span><span
+                                        datevalue="1985" class="">1985</span><span datevalue="1986" class="">1986</span><span
+                                        datevalue="1987" class="">1987</span><span datevalue="1988" class="">1988</span><span
+                                        datevalue="1989" class="">1989</span><span datevalue="1990" class="">1990</span><span
+                                        datevalue="1991" class="">1991</span><span datevalue="1992" class="">1992</span><span
+                                        datevalue="1993" class="">1993</span><span datevalue="1994" class="">1994</span><span
+                                        datevalue="1995" class="">1995</span><span datevalue="1996" class="">1996</span><span
+                                        datevalue="1997" class="">1997</span><span datevalue="1998" class="">1998</span><span
+                                        datevalue="1999" class="">1999</span><span datevalue="2000" class="">2000</span><span
+                                        datevalue="2001" class="">2001</span><span datevalue="2002" class="">2002</span><span
+                                        datevalue="2003" class="">2003</span><span datevalue="2004" class="">2004</span><span
+                                        datevalue="2005" class="">2005</span><span datevalue="2006" class="">2006</span><span
+                                        datevalue="2007" class="">2007</span><span datevalue="2008" class="">2008</span><span
+                                        datevalue="2009" class="">2009</span><span datevalue="2010" class="">2010</span><span
+                                        datevalue="2011" class="">2011</span><span datevalue="2012" class="">2012</span><span
+                                        datevalue="2013" class="">2013</span><span datevalue="2014"
+                                                                                   class="current">2014</span><span
+                                        datevalue="2015" class="disable_day">2015</span><span datevalue="2016"
+                                                                                              class="disable_day">2016</span><span
+                                        datevalue="2017" class="disable_day">2017</span><span datevalue="2018"
+                                                                                              class="disable_day">2018</span><span
+                                        datevalue="2019" class="disable_day">2019</span><span datevalue="2020"
+                                                                                              class="disable_day">2020</span><span
+                                        datevalue="2021" class="disable_day">2021</span><span datevalue="2022"
+                                                                                              class="disable_day">2022</span><span
+                                        datevalue="2023" class="disable_day">2023</span><span datevalue="2024"
+                                                                                              class="disable_day">2024</span><span
+                                        datevalue="2025" class="disable_day">2025</span><span datevalue="2026"
+                                                                                              class="disable_day">2026</span><span
+                                        datevalue="2027" class="disable_day">2027</span><span datevalue="2028"
+                                                                                              class="disable_day">2028</span><span
+                                        datevalue="2029" class="disable_day">2029</span><span datevalue="2030"
+                                                                                              class="disable_day">2030</span><span
+                                        datevalue="2031" class="disable_day">2031</span><span datevalue="2032"
+                                                                                              class="disable_day">2032</span><span
+                                        datevalue="2033" class="disable_day">2033</span><span datevalue="2034"
+                                                                                              class="disable_day">2034</span><span
+                                        datevalue="2035" class="disable_day">2035</span><span datevalue="2036"
+                                                                                              class="disable_day">2036</span><span
+                                        datevalue="2037" class="disable_day">2037</span><span datevalue="2038"
+                                                                                              class="disable_day">2038</span><span
+                                        datevalue="2039" class="disable_day">2039</span><span datevalue="2040"
+                                                                                              class="disable_day">2040</span><span
+                                        datevalue="2041" class="disable_day">2041</span><span datevalue="2042"
+                                                                                              class="disable_day">2042</span><span
+                                        datevalue="2043" class="disable_day">2043</span><span datevalue="2044"
+                                                                                              class="disable_day">2044</span><span
+                                        datevalue="2045" class="disable_day">2045</span><span datevalue="2046"
+                                                                                              class="disable_day">2046</span><span
+                                        datevalue="2047" class="disable_day">2047</span><span datevalue="2048"
+                                                                                              class="disable_day">2048</span><span
+                                        datevalue="2049" class="disable_day">2049</span><span datevalue="2050"
+                                                                                              class="disable_day">2050</span><span
+                                        datevalue="2051" class="disable_day">2051</span><span datevalue="2052"
+                                                                                              class="disable_day">2052</span><span
+                                        datevalue="2053" class="disable_day">2053</span><span datevalue="2054"
+                                                                                              class="disable_day">2054</span><span
+                                        datevalue="2055" class="disable_day">2055</span><span datevalue="2056"
+                                                                                              class="disable_day">2056</span><span
+                                        datevalue="2057" class="disable_day">2057</span><span datevalue="2058"
+                                                                                              class="disable_day">2058</span><span
+                                        datevalue="2059" class="disable_day">2059</span><span datevalue="2060"
+                                                                                              class="disable_day">2060</span><span
+                                        datevalue="2061" class="disable_day">2061</span><span datevalue="2062"
+                                                                                              class="disable_day">2062</span><span
+                                        datevalue="2063" class="disable_day">2063</span><span datevalue="2064"
+                                                                                              class="disable_day">2064</span><span
+                                        datevalue="2065" class="disable_day">2065</span><span datevalue="2066"
+                                                                                              class="disable_day">2066</span><span
+                                        datevalue="2067" class="disable_day">2067</span><span datevalue="2068"
+                                                                                              class="disable_day">2068</span><span
+                                        datevalue="2069" class="disable_day">2069</span><span datevalue="2070"
+                                                                                              class="disable_day">2070</span><span
+                                        datevalue="2071" class="disable_day">2071</span><span datevalue="2072"
+                                                                                              class="disable_day">2072</span><span
+                                        datevalue="2073" class="disable_day">2073</span><span datevalue="2074"
+                                                                                              class="disable_day">2074</span><span
+                                        datevalue="2075" class="disable_day">2075</span><span datevalue="2076"
+                                                                                              class="disable_day">2076</span><span
+                                        datevalue="2077" class="disable_day">2077</span><span datevalue="2078"
+                                                                                              class="disable_day">2078</span><span
+                                        datevalue="2079" class="disable_day">2079</span><span datevalue="2080"
+                                                                                              class="disable_day">2080</span><span
+                                        datevalue="2081" class="disable_day">2081</span><span datevalue="2082"
+                                                                                              class="disable_day">2082</span><span
+                                        datevalue="2083" class="disable_day">2083</span><span datevalue="2084"
+                                                                                              class="disable_day">2084</span><span
+                                        datevalue="2085" class="disable_day">2085</span><span datevalue="2086"
+                                                                                              class="disable_day">2086</span><span
+                                        datevalue="2087" class="disable_day">2087</span><span datevalue="2088"
+                                                                                              class="disable_day">2088</span><span
+                                        datevalue="2089" class="disable_day">2089</span><span datevalue="2090"
+                                                                                              class="disable_day">2090</span><span
+                                        datevalue="2091" class="disable_day">2091</span><span datevalue="2092"
+                                                                                              class="disable_day">2092</span><span
+                                        datevalue="2093" class="disable_day">2093</span><span datevalue="2094"
+                                                                                              class="disable_day">2094</span><span
+                                        datevalue="2095" class="disable_day">2095</span><span datevalue="2096"
+                                                                                              class="disable_day">2096</span><span
+                                        datevalue="2097" class="disable_day">2097</span><span datevalue="2098"
+                                                                                              class="disable_day">2098</span><span
+                                        datevalue="2099" class="disable_day">2099</span></div>
+                            </div>
+                            <div class="dates_mm dates_choose"><span class="prev_choose choose_btn" id="xv_Mm_prev"><i
+                                    class="sign"></i></span><span class="ipt_wrap" id="xv_Moth_wrap"><input
+                                    class="dlt_status"
+                                    style="width:16px;margin-left:10px;"
+                                    id="xv_Ipt_month"
+                                    type="text"><small>月</small><i
+                                    class="sign"></i></span><span class="next_choose choose_btn" id="xv_Mm_next"><i
+                                    class="sign"></i></span>
+                                <div class="dates_mm_list" id="xv_Dates_mm_list" style="display:none"><span
+                                        datevalue="1"
+                                        class="">01月</span><span
+                                        datevalue="2" class="">02月</span><span datevalue="3" class="">03月</span><span
+                                        datevalue="4"
+                                        class="">04月</span><span
+                                        datevalue="5" class="">05月</span><span datevalue="6" class="">06月</span><span
+                                        datevalue="7"
+                                        class="">07月</span><span
+                                        datevalue="8" class="">08月</span><span datevalue="9" class="">09月</span><span
+                                        datevalue="10"
+                                        class="">10月</span><span
+                                        datevalue="11" class="">11月</span><span datevalue="12"
+                                                                                class="disable_day">12月</span></div>
+                            </div>
+                        </div>
+                        <table class="dates_table" id="dates_table">
+                            <thead>
+                            <tr>
+                                <th>日</th>
+                                <th>一</th>
+                                <th>二</th>
+                                <th>三</th>
+                                <th>四</th>
+                                <th>五</th>
+                                <th>六</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td index="0" class="other_day" m="10" y="2014">26</td>
+                                <td index="1" class="other_day" m="10" y="2014">27</td>
+                                <td index="2" class="other_day" m="10" y="2014">28</td>
+                                <td index="3" class="other_day" m="10" y="2014">29</td>
+                                <td index="4" class="other_day" m="10" y="2014">30</td>
+                                <td index="5" class="other_day" m="10" y="2014">31</td>
+                                <td index="6" class="" m="11" y="2014">1</td>
+                            </tr>
+                            <tr>
+                                <td index="7" class="" m="11" y="2014">2</td>
+                                <td index="8" class="" m="11" y="2014">3</td>
+                                <td index="9" class="" m="11" y="2014">4</td>
+                                <td index="10" class="" m="11" y="2014">5</td>
+                                <td index="11" class="" m="11" y="2014">6</td>
+                                <td index="12" class="" m="11" y="2014">7</td>
+                                <td index="13" class="" m="11" y="2014">8</td>
+                            </tr>
+                            <tr>
+                                <td index="14" class="" m="11" y="2014">9</td>
+                                <td index="15" class="" m="11" y="2014">10</td>
+                                <td index="16" class="" m="11" y="2014">11</td>
+                                <td index="17" class="" m="11" y="2014">12</td>
+                                <td index="18" class="" m="11" y="2014">13</td>
+                                <td index="19" class="" m="11" y="2014">14</td>
+                                <td index="20" class="" m="11" y="2014">15</td>
+                            </tr>
+                            <tr>
+                                <td index="21" class="" m="11" y="2014">16</td>
+                                <td index="22" class="" m="11" y="2014">17</td>
+                                <td index="23" class="" m="11" y="2014">18</td>
+                                <td index="24" class="" m="11" y="2014">19</td>
+                                <td index="25" class="" m="11" y="2014">20</td>
+                                <td index="26" class="" m="11" y="2014">21</td>
+                                <td index="27" class="" m="11" y="2014">22</td>
+                            </tr>
+                            <tr>
+                                <td index="28" class="" m="11" y="2014">23</td>
+                                <td index="29" class="" m="11" y="2014">24</td>
+                                <td index="30" class="" m="11" y="2014">25</td>
+                                <td index="31" class="" m="11" y="2014">26</td>
+                                <td index="32" class="" m="11" y="2014">27</td>
+                                <td index="33" class="" m="11" y="2014">28</td>
+                                <td index="34" class="" m="11" y="2014">29</td>
+                            </tr>
+                            <tr>
+                                <td index="35" class="" m="11" y="2014">30</td>
+                                <td index="36" class="disable_day" m="12" y="2014">1</td>
+                                <td index="37" class="disable_day" m="12" y="2014">2</td>
+                                <td index="38" class="disable_day" m="12" y="2014">3</td>
+                                <td index="39" class="disable_day" m="12" y="2014">4</td>
+                                <td index="40" class="disable_day" m="12" y="2014">5</td>
+                                <td index="41" class="disable_day" m="12" y="2014">6</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="dates_bottom">
+                            <ul id="dates_hms" class="dates_hms" style="display:block">
+                                <li class="time_tag">时间</li>
+                                <li><input type="text" id="xv_Hours" class="dlt_status"><span>:</span></li>
+                                <li><input type="text" id="xv_Minutes" class="dlt_status"><span>:</span></li>
+                                <li><input type="text" id="xv_Seconds" class="dlt_status"><span>&nbsp;</span></li>
+                            </ul>
+                            <div class="dates_btn"><a id="xv_Dates_clear">清空</a><a id="xv_Dates_today">今天</a><a
+                                    id="xv_Dates_ok">确认</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="data">
+                    <span>满&nbsp;分&nbsp;值&nbsp;:</span>&nbsp;&nbsp;&nbsp;
+                    <input class="textBox7" id="release-homework-height-score">
+                </div>
+                <div class="data">
+                    <span>是否查重:</span>
+                    <!-- 开关按钮 -->
+                    <div class="switch-btn" id="kaiguan">
+                        <input type="checkbox" class="hidden-checkbox" name="" value="">
+                        <span class="switch-area"></span>
+                        <span class="switch-toggle"></span>
+                    </div>
+                </div>
+                <!-- 查重收缩框 -->
+                <div id="chachong">
+                    <span>查重警戒值：</span>
+                    <input class="textBox5" id="release-homework-check-warm">%
+                    <br><br>
+                    <span>查重率高于</span>
+                    <input class="textBox5" id="release-homework-check-highest">%自动打回
+                </div>
+                <div class="data1">
+                    <button class="button4">
+                        <a href="#">
+                            <img src="../resources/img/xiazai.png">
+                            <span style="font-size: 16px;color: white;">导入作业</span>
+                        </a>
+                    </button>
+                    <button class="button5" id="release-homework-but">
+                        <!--                        <a href="javascript:">-->
+                        <span id="releaseWork" style="font-size: 16px;color: white;">发布个人作业</span>
+                        <!--                        </a>-->
+                    </button>
+                    <button class="button6">
+                        <a href="#">
+                            <span style="font-size: 16px;color: #32BAF0 ;" onclick="cancelTask()">取消</span>
+                        </a>
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- 个人作业详情 -->
+            <div class="seeHomeworkBox" id="seeHomeworkBox">
+                <!--                <div class="seeHomework">-->
+                <!--                    <span class="personWork"> 个人作业&nbsp; </span>-->
+                <!--                    <span class="time"> 20/05/10&nbsp; &nbsp;&nbsp;11:30</span>-->
+                <!--                    <div class="box">-->
+                <!--                        <a href="/teacherpersonalwork" class="twoWork">第二次作业</a>-->
+                <!--                    </div>-->
+                <!--                    <span class="details"> 无 </span>-->
+                <!--                    <span class="finnalTime">截止日期：20/05/29 &nbsp;23:59&nbsp;&nbsp;&nbsp;&nbsp;0条讨论 </span>-->
+                <!--                    <div class="status">-->
+                <!--                        <div class="revised">-->
+                <!--                            <a href="/teacherpersonalwork">78</a>-->
+                <!--                            <p>已批</p>-->
+                <!--                        </div>-->
+                <!--                        <div class="unrevised">-->
+                <!--                            <a href="/teacherpersonalwork">14</a>-->
+                <!--                            <p style="color: #970002;">未批</p>-->
+                <!--                        </div>-->
+                <!--                        <div class="unturned">-->
+                <!--                            <a href="/teacherpersonalwork">4</a>-->
+                <!--                            <p>未交</p>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--&lt;!&ndash;                    <div class="number1">&ndash;&gt;-->
+                <!--&lt;!&ndash;                        <a href="#" class="span8">0</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;                        <a href="#" class="span91">1</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;                        <a href="#" class="span9">0</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+                <!--&lt;!&ndash;                    <div class="numbertitle1">&ndash;&gt;-->
+                <!--&lt;!&ndash;                        <span class="span10">已批</span>&ndash;&gt;-->
+                <!--&lt;!&ndash;                        <span class="span11" style="color: #970002;">未批</span>&ndash;&gt;-->
+                <!--&lt;!&ndash;                        <span class="span11">未交</span>&ndash;&gt;-->
+                <!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+                <!--                </div>-->
+            </div>
+            <div class="contentBottom">
+                <p>欢迎开课</p>
+                <p>快速发布、收集学生作业，支持50多种文档在线批阅。</p>
+                <P>多维度（全班查重、作业字数等）统计学生作业情况。（点击播放视频，查看使用详情）</P>
+            </div>
+        </div>
+
+    </div>
+    <!--    左划出菜单-->
+    <div class="div-left-menu" id="div-left-menu">
+        <div class="div-left-menu-top">
+            <a href="#">课堂</a><br>
+            <a href="#">备课区</a><br>
+            <a href="#">私信</a>
+        </div>
+        <div class="div-left-menu-course">
+            <div class="courseBox" id="courseBox">
+                <p>教授的课程(<span>15</span>)</p>
+<!--                <div class="courseList">-->
+<!--                    <img src="../resources/img/29.png"/>-->
+<!--                    <a href="#">软件工程与计算Ⅱ</a>-->
+<!--                </div>-->
+                <div class="bar1" style="background-color: #f6f6f6;display: none;   ">
+                    <div class="bar2" style="height: 126px"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="../resources/js/common/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../resources/js/common/jquery-ui.js"></script>
+<!--<script src="seajs-2.3.0/sea.js"></script>-->
+<script src="../resources/calendar/dist/js/calendar.min.js"></script>
+<!--<script src="src/js/calendar.js"></script>-->
+<script type="text/javascript">
+    // var opts1 = {//example 1 opts
+    //         'targetId': 'date1',//时间写入对象的id
+    //         'triggerId': ['date1', 'dateBtn1'],//触发事件的对象id
+    //         'alignId': 'datesWrap1',//日历对齐对象
+    //         'format': '-',//时间格式 默认'YYYY-MM-DD HH:MM:SS'
+    //         'min': '2014-09-20 10:00:00',//最大时间
+    //         'max': '2014-10-30 10:00:00'//最小时间
+    //     },
+    //     opts2 = {//example 2 opts
+    //         'targetId': 'date2',
+    //         'triggerId': ['dateBtn2'],
+    //         'alignId': 'datesWrap2',
+    //         'format': '-',//时间格式 默认'YYYY-MM-DD HH:MM:SS'
+    //         'min': '2014-09-20 10:00:00',//最大时间
+    //         'max': '2014-10-30 10:00:00'//最小时间
+    //     },
+
+    var opts3 = {//example 3 opts
+        'targetId': 'release-homework-data',
+        'triggerId': 'release-homework-data',
+        // 'alignId': 'release-homework-data',
+        'hms': 'off',
+        'format': '-',
+        'max': '2021-11-30',
+
+        display: 'modal', //显示方式 ，可选modal\inline\bubble\top\bottom
+        mode: 'scroller',
+    };
+    //  opts4 = {
+    //     'targetId': 'date4',//时间写入对象的id
+    //     'min': '2014-09-20 10:00:00',//最大时间
+    //     'max': '2014-10-30 10:00:00'//最小时间
+    // };
+
+    //example 1:
+    // xvDate(opts1);
+    // xvDate(opts2);
+    xvDate(opts3);
+    // xvDate(opts4);
+
+    /*seajs.config({
+        alias: {//别名配置
+            'main': '/xvCalendar/src/js/main.js'
+        }
+    });
+    seajs.use(['main']);
+*/
+</script>
+
+<script type="text/javascript" src="../resources/js/common/common.js"></script>
+<script type="text/javascript" src="../resources/js/teacher/teacherhomework.js"></script>
+<script type="text/javascript" src="../resources/js/teacher/teacherhomeworklist.js"></script>
+</body>
+</html>

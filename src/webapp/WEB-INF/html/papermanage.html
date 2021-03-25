@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>-简单好用的互动课堂管理工具</title>
+    <link type="text/css" rel="stylesheet" href="../resources/css/papermanage.css">
+</head>
+<body>
+<div class="bge">
+    <!--导航-->
+    <div class="div-nav-default">
+        <!--    左菜单-->
+        <ul class="ul-nav-menu-left" id="ul-nav-menu">
+            <li class="li-nav-item logo">
+                <img src="../resources/img/logo.jpg" width="96px" height="24px" id="left-menu-logo">
+            </li>
+            <li class="li-nav-item">
+                <a href="/teachercourse"  id="left-menu-ketang">课堂
+                    <img src="../resources/img/hot.jpg" style="width: 21px;height: 10px;vertical-align: top;">
+                </a>
+            </li>
+            <li class="li-nav-item">
+                <a href="/muke" id="left-menu-muke">精品慕课</a>
+            </li>
+            <li class="li-nav-item">
+                <a href="/myjingpin" id="left-menu-jingpin">我的精品</a>
+            </li>
+            <li class="li-nav-item">
+                <a href="/shuangxuanhui" id="left-menu-shuangxuanhui" class="active">双选会</a>
+            </li>
+            <li class="li-nav-item">
+                <a href="/papermanage" id="left-menu-paper">论文管理</a>
+            </li>
+        </ul>
+        <!--    右菜单-->
+        <ul class="ul-nav-menu-right">
+            <!--        工具-->
+            <li class="li-nav-item tool">
+                <a>
+                    <img src="../resources/img/tool.jpg" id="tool"></a>
+
+                <ul style="display: none;background-color: #ffffff"  id="ul-tool" class="ul-tool">
+                    <li><a href="#">论文查重</a></li>
+                    <li><a href="#">学术存证</a></li>
+                </ul>
+            </li>
+            <!--        通知-->
+            <li class="li-nav-item notice">
+                <a><img src="../resources/img/notice.jpg" id="notice"></a>
+                <div class="div-notice" style="display: none;" id="divnotice">
+                    <p class="zw">暂无新通知</p>
+                    <div class="div-operation">
+                        <a id="ignore-all" class="div-operation-ignoreall">全部标记已读</a>
+                        <a id="check-all" class="div-operation-check">查看全部</a>
+                    </div>
+                </div>
+            </li>
+            <!--        用户信息-->
+            <li class="li-nav-item user">
+                <a class="user"><img src="../resources/img/user.jpg" id="info"></a>
+                <div class="ul-user-info" id="userinfo" style="display: none;">
+                    <ul>
+                        <li id="user-setting"><a>个人设置</a></li>
+                        <li id="log-out"><a>退出账户</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="top">
+        <p>我的论文管理组织</p>
+        <button id="btnPaper">+加入论文管理组织</button>
+    </div>
+    <div class="paperContent">
+        <p>同学你好，欢迎进入课堂派论文管理系统</p>
+        <span>目前您还未加入任何论文管理组织，请点击<a>加入论文管理组织</a>，输入邀请码加入论文评审/答辩组织</span>
+        <ul class="paperProcess">
+            <li>加入管理组织</li>
+            <li>学生上交论文</li>
+            <li>导师审核</li>
+            <li>管理人员分配评审/答辩</li>
+            <li>专家/答辩委员评审</li>
+            <li>完成论文评审/答辩</li>
+        </ul>
+    </div>
+</div>
+<script src="../resources/js/common/common.js"></script>
+<script type="text/javascript">
+    window.onload=function () {
+        var MyStudy=document.getElementById('myStudy').getElementsByTagName('a');
+        var Sdiv=document.getElementById('content').getElementsByClassName('myOnlineCourse');
+        var i=0;
+        for (i=0;i<MyStudy.length;i++)
+        {
+            MyStudy[i].index=i;
+            MyStudy[i].onclick=function () {
+                for (i=0;i<MyStudy.length;i++)
+                {
+                    MyStudy[i].className='';
+                    Sdiv[i].style.display='none';
+                };
+                Sdiv[this.index].style.display='block';
+                this.className='S-active';
+
+            }
+        }
+    }
+
+    // 工具
+    var Tool=document.getElementById('tool');
+    var Ultool=document.getElementById('ul-tool');
+    Tool.onclick=function (aaa) {
+        if (Ultool.style.display=='none')
+        {
+            Ultool.style.display='block';
+        }
+        else {
+            Ultool.style.display='none';
+        }
+
+    }
+
+    // 通知
+    var Nitice=document.getElementById('notice');
+    var Divnotice=document.getElementById('divnotice');
+    Nitice.onclick=function (bbb) {
+        if (Divnotice.style.display=='none')
+        {
+            Divnotice.style.display='block';
+        }
+        else {
+            Divnotice.style.display='none';
+        }
+    }
+    // 个人信息
+    var Info=document.getElementById('info');
+    var Userinfo=document.getElementById('userinfo');
+    Info.onclick=function (ccc) {
+        if (Userinfo.style.display=='none')
+        {
+            Userinfo.style.display='block';
+        }
+        else {
+            Userinfo.style.display='none';
+        }
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>帐号注册-简单好用的互动课堂管理工具</title>
+    <link rel="stylesheet" href="../resources/css/register.css" type="text/css">
+</head>
+<body>
+<div id="div-wrap">
+    <div id="div-content">
+        <h1>注册帐号</h1>
+        <p>请选择您在日常教学中的实际身份</p>
+        <div id="div-TeacherRegister">
+            <img src="../resources/img/avatar.jpg">
+            <input type="button" value="我是老师/助教" id="Btn-TeacherRegister" onclick="TeacherRegister()">
+        </div>
+        <div id="div-StudentRegister">
+            <img src="../resources/img/avatar.jpg">
+            <input type="button" value="我是学生" id="Btn-StudentRegister" onclick="StudentRegister()">
+        </div>
+        <p id="p-Login"> 已有帐号？<a href="login.html">去登录</a></p>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    function TeacherRegister() {
+        window.location.href='/teacherregister';
+    }
+    function StudentRegister() {
+        window.location.href='/studentregister';
+    }
+
+</script>
+</html>

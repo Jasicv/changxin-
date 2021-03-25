@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课堂-简单好用的互动课堂管理工具</title>
+    <link type="text/css" rel="stylesheet" href="../resources/css/studenthomework.css">
+</head>
+<body>
+<div class="bge">
+    <!--导航-->
+    <div class="div-nav-default">
+        <!--左菜单-->
+        <ul class="ul-nav-menu-left">
+            <li class="li-nav-item leftButton" id="li-nav-item">
+                <img src="../resources/img/leftButton.jpg" id="leftButton">
+            </li>
+            <li class="li-nav-item courseInfo" id="courseInfo">
+                <p>
+                    <a href="/studentcourse">课堂 > </a>
+                    <span><p id="courseName"></p></span>
+                </p>
+            </li>
+        </ul>
+        <!--    右菜单-->
+        <ul class="ul-nav-menu-right">
+            <!--        工具-->
+            <li class="li-nav-item tool">
+                <a>
+                    <img src="../resources/img/tool.jpg" id="tool"></a>
+
+                <ul style="display: none" id="ul-tool">
+                    <li><a href="#">论文查重</a></li>
+                    <li><a href="#">学术存证</a></li>
+                </ul>
+            </li>
+            <!--        通知-->
+            <li class="li-nav-item notice">
+                <a><img src="../resources/img/notice.jpg" id="notice"></a>
+                <div class="div-notice" id="divnotice">
+                    <p class="zw">暂无新通知</p>
+                    <div class="div-operation">
+                        <a id="ignore-all" class="div-operation-ignoreall">全部标记已读</a>
+                        <a id="check-all" class="div-operation-check">查看全部</a>
+                    </div>
+                </div>
+            </li>
+            <!--        用户信息-->
+            <li class="li-nav-item user">
+                <a class="user"><img src="../resources/img/user.jpg" id="info"></a>
+                <div class="ul-user-info" id="userinfo" style="display: none">
+                    <ul>
+                        <li id="user-setting"><a>个人设置</a></li>
+                        <li id="log-out"><a>退出账户</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--    左划出菜单-->
+    <div class="div-left-menu" id="div-left-menu">
+        <div class="div-left-menu-top">
+            <a href="#" class="menu-yop-class" id="menu-yop-class">课堂</a><br>
+            <a href="#" class="menu-yop-letter" id="menu-yop-letter">私信</a>
+        </div>
+        <div class="div-left-menu-course" id="div-left-menu-course">
+            <div class="courseBox">
+                <p>已有课程</p>
+                <div class="courseList" id="courseList">
+<!--                    <a href="#" id="courseList-class">软件工程与计算Ⅱ</a>-->
+                </div>
+                <div class="bar1" style="background-color: #f6f6f6;display: none;   ">
+                    <div class="bar2" style="height: 126px"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    课程信息-->
+    <div class="div-course-head" id="div-course-head">
+        <div class="div-course-head-info1">
+            <h1 class="courseName" id="title-courseName">软件工程B</h1>
+            <h2 class="courseClass" id="title-courseClass">91721380214</h2>
+            <div class="write">&emsp;</div>
+            <div class="div-course-head-info2">加课码:<a id="title-courseId">E52F48</a></div>
+            <ul>
+                <li>同学<a href="#" id="courseStudent">115</a></li>
+                <li><a href="#" id="courseGrade">成绩</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--    滑动菜单-->
+    <div class="banner1">
+        <div class="in-header" style="background: none repeat scroll 0% 0%">
+            <button class="banner1-courseName" id="banner1-courseName" style="display: none"><br>
+                <span></span>
+            </button>
+            <div class="banner1-nav" id="banner1-nav">
+                <a href="#">课堂互动</a>
+                <a href="#" class="active">作业</a>
+                <a href="#">话题</a>
+                <a href="#">资料</a>
+                <a href="#">测试</a>
+                <a href="#">公告</a>
+            </div>
+
+        </div>
+    </div>
+    <!--    未布置作业-->
+    <div class="homeworkPage">
+        <div class="div-emptyWork">
+            <div class="div-emptyWork-box">
+                <h3>欢迎来到课堂！</h3>
+                <p>您的老师暂未布置作业</p>
+            </div>
+        </div>
+        <div class="div-homework" id="div-homework">
+<!--            <div class="homework-box">-->
+<!--                <div class="homework-box-mian">-->
+<!--                    <div class="homework-box-header">-->
+<!--                        <span class="homework-title-work">个人作业</span>-->
+<!--                        <span id="homework-release-data">20/05/26</span>-->
+<!--                        <span id="homework-release-time">15：24</span>-->
+<!--                    </div>-->
+<!--                    <div class="homework-box-body">-->
+<!--                        <div class="homework-body">-->
+<!--                            <h3>-->
+<!--                                <a href="/studentuphomework" id="homework-body-title" title="第八次作业&#45;&#45;编写软件设计报告">第八次作业&#45;&#45;编写软件设计报告</a>-->
+<!--                            </h3>-->
+<!--                            <div class="homework-body-content">-->
+<!--                                <div class="homework-body-content-p" id="homework-body-content-p">针对小组所选题目，基于软件目标、功能模型、软件界面、人力分配、进度安排、资金预算等方面，编写简要的软件设计报告，向甲方提供一个简要的项目设计建议书。...-->
+<!--                                    <a href="/studentuphomework" id="view-text">查看全文></a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="homework-body-but">-->
+<!--                            <a href="/studentuphomework" class="upload-work" id="upload-work">上传作业</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="foot">-->
+<!--                        <img src="../resources/img/assets/ic_card_time@2x.png">-->
+<!--                        <p class="end-da">截止日期：</p>-->
+<!--                        <span class="end-data" id="end-data">20/06/12</span>-->
+<!--                        <b class="end-time" id="end-time">23:54</b>-->
+<!--                        <a href="#">-->
+<!--                            <p class="discuss-num" id="discuss-num">0</p>-->
+<!--                            <p class="discuss-tit">条讨论</p>-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../resources/js/common/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../resources/js/common/jquery-ui.js"></script>
+<script type="text/javascript" src="../resources/js/common/common.js"></script>
+<script type="text/javascript" src="../resources/js/student/studenthomework.js"></script>
+</body>
+</html>
