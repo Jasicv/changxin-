@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课堂派-首页</title>
+    <link rel="stylesheet" type="text/css" href="../resources/css/index.css">
+    <script type="text/javascript" src="../resources/js/index/index.js"></script>
+</head>
+<body>
+<div class="header">
+    <img src="../resources/img/assets/logo.png">
+    <div class="login-regist">
+        <button type="button" id="login" class="login" onclick="log()">登录</button>
+        <button type="button" id="regist" class="regist" onclick="reg()">注册</button>
+    </div>
+</div>
+<div class="main">
+    <!--    轮播-->
+    <div class="main-div" id="main-div">
+        <span class="main-div-img" id="main-div-img">
+            <img src="../resources/img/assets/banner1.png">
+            <img src="../resources/img/assets/banner2.png">
+        </span>
+    </div>
+    <!--    鼠标悬浮切换轮播-->
+    <ul class="main-ul">
+        <li class="main-ul-li1" id="main-ul-li1">
+            <button onmouseover="but1Over()" id="main-ul-li-but1"></button>
+        </li>
+        <li class="main-ul-li2" id="main-ul-li2">
+            <button onmouseover="but2Over()" id="main-ul-li-but2"></button>
+        </li>
+    </ul>
+    <!--    静态div1-->
+    <div class="section2-1">
+        <div class="cWidth">
+            <div class="summaryBox">
+                <ul>
+                    <li>
+                        <img src="../resources/img/assets/Whome1.png" alt="">
+                        <h2>极简教学主义</h2>
+                        <p>无安装，无插件，无需专门学习；掌握简单，三分钟上手；不改变教学习惯，让课堂更精彩，让教学更高效！</p>
+                    </li>
+                    <li>
+                        <img src="../resources/img/assets/Whome2.png" alt="">
+                        <h2>远程直播互动教学</h2>
+                        <p>一键开启直播，共享电脑屏幕，替代教室投影仪/黑板，像在教室里一样互动教学。直播录像自动保存，可查看课堂直播教学统计和再次回顾学习。</p>
+                    </li>
+                    <li>
+                        <img src="../resources/img/assets/Whome3.png" alt="">
+                        <h2>有趣的课堂互动</h2>
+                        <p>提供丰富的教学互动创新场景，上传原生PPT课件进行讲解，手机遥控，标记疑问，评论，开启弹幕，抢答，提问，讨论，随时奖励学生表现，让课堂更精彩。</p>
+                    </li>
+                    <li>
+                        <img src="../resources/img/assets/Whome4.png" alt="">
+                        <h2>随堂互动答题</h2>
+                        <p>随时编辑互动答题：投票、评价、匿名开放、拍照、选择、判断、简答等多种题型，实时分析互动答题情况，一键词云提取学生有效观点，及时检验教学效果</p>
+                    </li>
+                    <li>
+                        <img src="../resources/img/assets/Whome5.png" alt="">
+                        <h2>精准的考勤签到</h2>
+                        <p>二维码，数字口令，GPS，传统考勤等多种考勤形式；杜绝代签，一键导出考勤记录</p>
+                    </li>
+                    <li>
+                        <img src="../resources/img/assets/Whome6.png" alt="">
+                        <h2>作业神器</h2>
+                        <p>81种文档格式作业在线展示和批阅，随时随地批改作业；实时查重，精准比对，避免学生抄袭；自动管理成绩，一键下载作业数据</p>
+                    </li>
+                    <li>
+                        <img src="../resources/img/assets/Whome7.png" alt="">
+                        <h2>智能成绩管理</h2>
+                        <p>汇总考勤、表现、作业、测试、平时成绩、期末成绩；自由调整成绩权重，汇总最终教学成绩，科学权威</p>
+                    </li>
+                    <li>
+                        <img src="../resources/img/assets/Whome8.png" alt="">
+                        <h2>教学全过程数据分析</h2>
+                        <p>教学全过程活动数据自动生成，实时查看课程和学生数据面板和报表，教学数据可留存，可追溯</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--    静态div2-->
+    <div class="sections2-1">
+        <div class="cont">
+            <div class="let">
+                <img src="../resources/img/assets/s2.png">
+            </div>
+            <div class="rig">
+                <img src="../resources/img/assets/wdian.png">
+                <h5>远程直播，在线互动教学</h5>
+                <ul>
+                    <li><span></span>无安装，操作简单</li>
+                    <li><span></span>在线实时互动，全过程教学统计</li>
+                    <li><span></span>自动录播，再次回顾，保留教学资产</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="cWidth">
+        <div class="nav-new clearfix">
+            <a href="/index/abouts.html">关于我们</a>
+            <a href="/index/contact.html">联系我们</a>
+            <a href="/index/service.html">服务条款</a>
+            <a href="/index/older.html" target="_blank">浏览器下载</a>
+            <a href="/index/updateDynamics">更新动态</a>
+        </div>
+        <p>Copyright © 2014 ketangpai.com All Rights Reserved. 京ICP备14023276号-4</p><div style="width:300px;margin:0 auto; padding:20px 0;"><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011402010566" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备 11011402010566号</p></a></div><p></p>
+    </div>
+</div>
+</body>
+</html>
