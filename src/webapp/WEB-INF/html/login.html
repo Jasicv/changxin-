@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录-简单好用的互动课堂管理工具</title>
+    <link rel="stylesheet" href="../resources/css/login.css" type="text/css">
+</head>
+<body>
+<div class="div-wrap" id="div-wrap">
+    <div id="div-content">
+        <div id="div-content-top">
+            <a class="active">帐号登录</a>
+            <a>手机短信登录</a>
+        </div>
+        <!--        帐号登陆-->
+        <div class="show">
+            <div id="div-AccountLogin">
+                <div>
+                    <input id="account-number" class="account-number" type="text" placeholder="  请输入帐号" style="color: #aaaaaa"><br>
+                    <p id="account-number-tips" class="tips"></p>
+                </div>
+                <div>
+                    <input id="account-password" class="account-password" type="password" placeholder="  请输入密码" style="color: #aaaaaa"><br>
+                    <p id="account-password-tips" class="tips" ></p>
+                </div>
+                <div>
+               <!-- <p class="account-identity-title">是否为教职工：</p>
+                <div class="account-identity">
+                    <input type="checkbox" value="teacher" name="tea" id="account-identity">是
+                </div>-->
+            </div>
+            </div>
+            <div id="div-AutoLogin">
+                <a href="ForgetPassword.html">忘记密码？</a>
+                <label onmouseover="document.getElementById('div-AccountLoginWarn').style.display='block';"
+                       onmouseout="document.getElementById('div-AccountLoginWarn').style.display='none';">
+                    <input type="checkbox">下次自动登录
+                </label>
+                <div id="div-AccountLoginWarn" >为了您的账号安全，请不要在网吧等地点登录!!!</div>
+                <input type="button" id="Btn-Login"  value="登   录">
+                <p id="p-Register"> 还没有帐号？<a href="/register">去注册</a></p>
+            </div>
+        </div>
+        <!--        短信登录-->
+        <div style="display: none" class="show">
+            <div id="div-SMSLogin">
+                <div class="div-Phone">
+                    <input type="text" placeholder="  手机号" style="color: #aaaaaa" class="SMS-Phone" id="SMS-Phone">
+                    <p id="SMS-Phone-tips" class="tips"></p>
+                </div>
+                <input type="text" placeholder="  验证码" style="color: #aaaaaa" class="SMS-Verify">
+                <input type="button" value="获取验证码" class="input-Btn">
+                <p id="SMS-Verify-tips" class="tips"></p>
+            </div>
+            <div id="div-SMSAutoLogin">
+                <a href="ForgetPassword.html">忘记密码？</a>
+                <label onmouseover="document.getElementById('div-SMSLoginWarn').style.display='block';"
+                       onmouseout="document.getElementById('div-SMSLoginWarn').style.display='none';">
+                    <input type="checkbox">下次自动登录
+                </label>
+                <div id="div-SMSLoginWarn" >为了您的账号安全，请不要在网吧等地点登录!!!</div>
+                <input type="button" id="Btn-SMSLogin" onclick="SMSLogin()" value="登   录">
+                <p id="p-SMSRegister"> 还没有帐号？<a href="register.html">去注册</a></p>
+            </div>
+        </div>
+
+
+    </div>
+</div >
+<script src="../resources/js/common/jquery-1.11.3.min.js"></script>
+<script type='text/javascript' src="../resources/js/login/login.js"></script>
+<script src="../resources/js/common/jquery.form.js"></script>
+</body>
+</html>
